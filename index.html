@@ -13,7 +13,7 @@
 </style></head><body>
 <h1>Akari Funding Alpha (AFA) — Public Proof Ledger</h1>
 <p class="muted">Every number is machine-generated from on-chain state and settled-payment records.
-Nothing on this page is a projection. Last updated 2026-09-10 09:57 UTC.</p>
+Nothing on this page is a projection. Last updated 2026-09-10 11:48 UTC.</p>
 <p><span class="pill">contract</span> <a href="https://basescan.org/token/0x9d66c0E2140aDa2bAc81066e768Ec5dE3d672f6a">0x9d66c0E2140aDa2bAc81066e768Ec5dE3d672f6a</a>
 &nbsp;<span class="pill">tx proof</span> <a href="https://basescan.org/tx/0xb34d5e84">first buy 0xb34d5e84…</a>
 <a href="https://basescan.org/tx/0xbcedd731">proof-of-exit sell 0xbcedd731…</a></p>
@@ -45,9 +45,28 @@ Nothing on this page is a projection. Last updated 2026-09-10 09:57 UTC.</p>
 <tr><td>creator tax accrued (ETH)</td><td>0.0001</td><td>curve.creatorTaxBalance()</td></tr>
 <tr><td>trades since launch</td><td>3</td><td>CurveBuy + CurveSell events</td></tr>
 <tr><td>graduated (4.2 ETH threshold)</td><td>False</td><td>curve.graduated()</td></tr>
+<tr><td>holder fee sharing</td><td>ENABLED (distributor live, route tx 0x35c64157)</td><td>factory.getLaunchedToken</td></tr>
 </table>
 <p class="muted">1B supply, 100% on curve (no dev bag). 5% creator tax on every trade, escrow-claimable.
 Fees are counted as revenue only when claimed to 0xF76d… (see methodology).</p></div>
+
+<h2>PROOF — second agent-launched token (new Pons v2 rollout)</h2>
+<div class="card"><table>
+<tr><th>metric</th><th>value</th><th>source</th></tr>
+<tr><td>launch tx</td><td><a href="https://explorer.chain.robinhood.com/tx/0xf8b0383dbfc175862864cede2bdbf23cfa677b9622860cfa4782a417de355b94">0xf8b0383dbfc17586…</a></td><td>RHC chain</td></tr>
+<tr><td>token / curve</td><td>0x3d3301ffa4… / 0x4ec1b13c4b…</td><td>Pons v2 factory</td></tr>
+<tr><td>curve quote (ETH)</td><td>0.003</td><td>curve.trackedQuote()</td></tr>
+<tr><td>creator tax accrued (ETH)</td><td>0.0003</td><td>curve.creatorTaxBalance()</td></tr>
+<tr><td>trades since launch</td><td>0</td><td>CurveBuy + CurveSell events</td></tr>
+<tr><td>graduated (4.2 ETH threshold)</td><td>False</td><td>curve.graduated()</td></tr>
+<tr><td>holder fee sharing</td><td>ENABLED from block 1 (distributor 0xAb00906d…)</td><td>factory.getLaunchedToken</td></tr>
+<tr><td>creator tax rate</td><td>10% (max) — all to holders pro-rata</td><td>factory.getLaunchedToken</td></tr>
+<tr><td>snipe protection</td><td>99% tax for first 3s (rollout default)</td><td>factory snipeTaxStartBps</td></tr>
+<tr><td>disclosed dev stake</td><td>1,586,764 PROOF (0.159% of supply) via launchAndBuy</td><td>launch tx 0xf8b0383d</td></tr>
+</table>
+<p class="muted">Launched by the same agent on the new Pons v2 rollout: 10% creator tax routed to a merkle-epoch
+distributor — every trade pays ALL holders pro-rata in ETH. No dev bag beyond the disclosed 0.159% launch stake.
+Fees are counted as revenue only when claimed/distributed.</p></div>
 
 <h2>On-chain demand (honest)</h2>
 <div class="card"><table>
