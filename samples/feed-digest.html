@@ -1,0 +1,20 @@
+
+<h1>Sample: consolidated signal digest (akari.feed.v1)</h1>
+<p><b>Generated:</b> 2026-10-26T18:47:13.802518+00:00<br>
+<b>Sources merged:</b> Hyperliquid funding+momentum (strict v7.2 confluence gate), Reddit sentiment bias, meme radar, armed Polymarket in-play matches. Every source fails soft — one dead upstream never kills the digest.</p>
+<h2>First 3 rows (free preview)</h2>
+<table border="1" cellpadding="6"><tr><th>source</th><th>asset</th><th>signal</th><th>confidence</th><th>ttl_sec</th></tr>
+<tr><td>hl</td><td>CHIP</td><td>LONG</td><td>0.59</td><td>300</td></tr>
+<tr><td>hl</td><td>HYPE</td><td>LONG</td><td>0.34</td><td>300</td></tr>
+<tr><td>hl</td><td>UNI</td><td>LONG</td><td>0.21</td><td>300</td></tr></table>
+<p><b>Full digest:</b> 18 rows via <code>GET /x402/feed</code> — $0.03 per call (USDC on Base, x402 v2).
+Free tier: <a href="https://akari-x402.puzzling-marten.workers.dev/x402/feed/preview">/x402/feed/preview</a> ·
+schema: <a href="https://akari-x402.puzzling-marten.workers.dev/x402/feed/schema">/x402/feed/schema</a></p>
+<h2>Armed Polymarket fixtures (in-play watchers live)</h2>
+<pre>Sevilla	Osasuna	esp.1	lal-sev-osa-2026-10-26	20261026
+Paris Saint-Germain	Lyon	fra.1	fl1-psg-lyo-2026-10-25	20261026
+Sassuolo	Lazio	ita.1	sea-sas-laz-2026-10-27	20261027
+AS Roma	Cagliari	ita.1	sea-rom-cag-2026-10-27	20261027
+Torino	Como	ita.1	sea-tor-com-2026-10-27	20261027</pre>
+<p>In-play rows enter the feed as ARMED when a watcher's 12%-edge bar is within reach; they flip to LONG/SHORT on a confirmed edge. No simulated rows — ever.</p>
+<p>Also available as ACP offerings: <code>hl_funding_signals</code> ($0.25), <code>reddit_sentiment_alpha</code> ($0.25), <code>polymarket_intel</code> ($0.25), <code>hl_trade_signals</code> ($1).</p>
