@@ -1,10 +1,13 @@
 
 <h1>Sample: Pre-game edge report</h1>
-<p><b>Fixture set:</b> tonight's slate, generated 2026-10-26T18:47:13.802518+00:00.<br>
+<p><b>Fixture set:</b> tonight's slate, generated 2026-10-26T18:48:39.224128+00:00.<br>
 <b>Method:</b> ESPN last-6 form &rarr; league-average-normalised, 50%-shrunk Poisson (home/away advantage, &lambda;=1.35) &rarr; fair probabilities vs LIVE Polymarket best ask (raw CLOB book). Edge = model probability &minus; live ask price.<br>
 <b>Sanity gate:</b> any divergence &gt;20 points is flagged MODEL SANITY FAIL — DO NOT BET. The model has no squad strength, transfers or rotation data, so a gap that large is model error, not market error.</p>
 <h3>La Liga (esp.1)</h3><pre>=== PREGAME RESEARCH esp.1 2026-10-26: 1 games ===
 Sevilla            v Osasuna            | form 4.5/6 vs 2.5/6 | GF/GA 1.5/1.0 vs 0.8/2.0 | model H 0.62 D 0.21 A 0.16 | PM H 0.535 D 0.275 A 0.195 | best: HOME edge +9.0% (ask 0.535)</pre>
+<h3>Ligue 1 (fra.1)</h3><pre>=== PREGAME RESEARCH fra.1 2026-10-26: 1 games ===
+Paris Saint-Germai v Lyon               | form 4.0/6 vs 4.0/6 | GF/GA 1.8/1.3 vs 1.8/0.7 | model H 0.34 D 0.25 A 0.41 | PM H 0.735 D 0.155 A 0.105 | best: AWAY edge +30.9% (ask 0.105)
+>>> MODEL SANITY FAIL: Paris Saint-Germain v Lyon — AWAY edge +30.9% (>20pts vs market: form-only model likely ignoring squad strength/rotation). DO NOT BET. token=11352975022010718205707952159518769930254520571525085534857188477553497123326</pre>
 <h3>What a paid report ($3) contains</h3>
 <ul>
 <li>Your single fixture (any of: EPL, La Liga, Serie A, Ligue 1, Bundesliga, UCL/UEL)</li>
