@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Akari Builder Program — 40% of every paid call you route</title>
+<style>
+ body{font-family:-apple-system,system-ui,sans-serif;background:#0d1117;color:#c9d1d9;margin:0;padding:24px;max-width:900px}
+ h1{color:#58a6ff;font-size:1.5rem} h2{color:#58a6ff;font-size:1.1rem;margin-top:28px}
+ .card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px 20px;margin:10px 0}
+ table{border-collapse:collapse;width:100%} td,th{padding:6px 10px;border-bottom:1px solid #21262d;text-align:left;vertical-align:top}
+ a{color:#58a6ff;text-decoration:none} a:hover{text-decoration:underline}
+ code{background:#21262d;padding:1px 5px;border-radius:4px;font-size:.85rem}
+ .muted{color:#8b949e} .pill{display:inline-block;background:#1f6feb33;border:1px solid #1f6feb66;border-radius:12px;padding:2px 10px;font-size:.8rem;color:#79c0ff}
+</style></head><body>
+<h1>Akari Builder Program</h1>
+<p class="muted">Machine-generated 2026-10-27 19:45 UTC. Terms are enforced in code, not by an agreement.</p>
+
+<div class="card">
+<p><strong>40% of every settled sale you route, in USDC on Base.</strong> No signup, no API key, no dashboard,
+no revenue report to file. Append <code>?ref=0xYourPayoutWallet</code> to any paid URL and the credit is
+recorded on the paid response. Payouts run monthly, minimum $1.00, verifiable on-chain.</p>
+<p><span class="pill">check your balance</span> <code>GET /x402/affiliate?address=0xYourWallet</code><br>
+<span class="pill">public board</span> <code>GET /x402/affiliate/leaderboard</code> — deliberately unseeded, so it is empty until someone actually earns</p>
+</div>
+
+<h2>Install the starter kit (5 minutes)</h2>
+<div class="card">
+<p><code>git clone https://github.com/edvyno/akari-x402-mcp && cd akari-x402-mcp && pip install -r requirements.txt</code></p>
+<p>Register it with any MCP host (Claude Desktop, Cursor, your own agent loop). It ships in
+<strong>dry-run</strong> mode: every tool returns the real <code>402</code> challenge, so you can review the surface
+and its prices with zero funds. Set <code>AKARI_PRIVATE_KEY</code> (a funded wallet) to pay per call, and
+<code>AKARI_REF=0xYourWallet</code> so every call you make on someone else's behalf pays you 40%.</p>
+<p class="muted">The kit is deliberately thin — it is a distribution channel for the catalog, not a
+framework. Fork it, add your own ref, ship it inside your product.</p>
+</div>
+
+<h2>Why this is worth your time</h2>
+<div class="card">
+<p>Every paid call is a real settlement on Base, so attribution is not a promise: it is a row in a ledger
+you can query. There is no volume target, no clawback if traffic stops, and no per-seat pricing.
+The referral pays on the same rail the buyer pays on — 40% of a $0.25 trade-plan is $0.10, credited the
+moment the buyer's transaction settles.</p>
+</div>
+
+<h2>What you can route (live prices)</h2>
+<div class="card"><table>
+<tr><th>route</th><th>price</th><th>what it returns</th></tr>
+<tr><td><code>/x402/feed</code></td><td>$0.02</td><td class="muted">LONG/SHORT/NEUTRAL rows: HL confluence, crowd sentiment, meme radar, armed fixtures</td></tr><tr><td><code>/x402/ta</code></td><td>$0.02</td><td class="muted">TradingView-style TA per symbol/timeframe, RSI/EMA/MACD composite score</td></tr><tr><td><code>/x402/hl-market</code></td><td>$0.02</td><td class="muted">Hyperliquid perp snapshot: funding, OI, mark, 30s cache, ~180 coins</td></tr><tr><td><code>/x402/wallet-intel</code></td><td>$0.02</td><td class="muted">Vet a payer wallet: balances, age, flows, counterparties, classification</td></tr><tr><td><code>/x402/wallet-intel/batch</code></td><td>$0.50</td><td class="muted">Up to 50 wallets vetted in one call</td></tr><tr><td><code>/x402/wallet-intel/deep</code></td><td>$0.10</td><td class="muted">Deep single-wallet dossier for pre-payment trust</td></tr><tr><td><code>/x402/trade-plan</code></td><td>$0.25</td><td class="muted">Executable HL ticket: side, IOC limit, size, ATR stop, 1.5R target, gate trace</td></tr><tr><td><code>/x402/launch-kit</code></td><td>$0.15</td><td class="muted">Deterministic launch copy for a token/agent from your own facts</td></tr><tr><td><code>/x402/desk-state</code></td><td>$0.05</td><td class="muted">The desk's own book, positions and stance, live</td></tr><tr><td><code>/x402/reddit-sentiment</code></td><td>$0.05</td><td class="muted">Bull/bear ratio per ticker from tracked subreddits</td></tr><tr><td><code>/x402/confluence</code></td><td>$0.25</td><td class="muted">Funding-carry + momentum confluence screen across perps</td></tr><tr><td><code>/x402/meme-radar</code></td><td>$0.10</td><td class="muted">New-launch radar with liquidity and holder concentration checks</td></tr><tr><td><code>/x402/signal-execute</code></td><td>$1.00</td><td class="muted">Signal → executed-order pipeline with risk gates</td></tr><tr><td><code>/x402/inplay-edge</code></td><td>$0.10</td><td class="muted">In-play football model vs LIVE Polymarket book, pass/fail tape included</td></tr>
+</table>
+<p class="muted">Free, no-auth: <code>/market.json</code> (catalog), <code>/x402/feed/preview</code>,
+<code>/llms.txt</code>, <code>/openapi.json</code>. Base USDC, x402 v2, eip155:8453.</p></div>
+
+<h2>Rules, plainly</h2>
+<div class="card"><table>
+<tr><th>rule</th><th>detail</th></tr>
+<tr><td>attribution</td><td>only on a paid <strong>200</strong> response whose URL carried a valid <code>?ref=0x…</code>; never on a 402, a failed settle, or a self-payment</td></tr>
+<tr><td>excluded payers</td><td>our own wallets — a self-payment is a test, not revenue, and earns no share</td></tr>
+<tr><td>floor</td><td>$1.00 accumulated before payout; balances carry forward, they do not expire</td></tr>
+<tr><td>payouts</td><td>monthly, USDC on Base, to the exact ref address; tx hash published in the ledger</td></tr>
+<tr><td>price changes</td><td>the price at the moment of the paid call is the price that counts</td></tr>
+</table></div>
+
+<p class="muted">This is a one-person desk, not a company: honesty is the only durable marketing.
+Losses are published here: <a href="./index.html">the proof ledger</a>.
+Current external revenue is on that page too, including when it is embarrassingly small.</p>
+</body></html>
