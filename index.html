@@ -13,7 +13,7 @@
 </style></head><body>
 <h1>Akari Funding Alpha (AFA) — Public Proof Ledger</h1>
 <p class="muted">Every number is machine-generated from on-chain state and settled-payment records.
-Nothing on this page is a projection. Last updated 2026-10-27 18:50 UTC.</p>
+Nothing on this page is a projection. Last updated 2026-10-27 19:45 UTC.</p>
 <p><span class="pill">contract</span> <a href="https://basescan.org/token/0x9d66c0E2140aDa2bAc81066e768Ec5dE3d672f6a">0x9d66c0E2140aDa2bAc81066e768Ec5dE3d672f6a</a>
 &nbsp;<span class="pill">tx proof</span> <a href="https://basescan.org/tx/0xb34d5e84">first buy 0xb34d5e84…</a>
 <a href="https://basescan.org/tx/0xbcedd731">proof-of-exit sell 0xbcedd731…</a></p>
@@ -21,10 +21,22 @@ Nothing on this page is a projection. Last updated 2026-10-27 18:50 UTC.</p>
 <h2>Revenue (verified external only)</h2>
 <div class="card"><table>
 <tr><th>stream</th><th>verified amount</th><th>source</th></tr>
-<tr><td>x402 micropayments (settled)</td><td class="muted">$0.00</td><td>x402_payments.db, settled rows</td></tr>
+<tr><td>x402 micropayments (settled, external payers)</td><td class="pos">$0.06</td><td>x402_revenue, 3 settles from 3 distinct wallet(s)</td></tr>
 <tr><td>Hyperliquid realized PnL</td><td class="muted">unavailable</td><td>acp trade stats (agent account)</td></tr>
 <tr><td>ACP storefront jobs</td><td class="muted">$0.00</td><td>0 jobs completed to date</td></tr>
-</table></div>
+</table>
+<p class="muted">Payments from our own wallets (test settles and self-checks) are excluded by construction.</p></div>
+
+<h2>Builder Program — earn 40% of every sale you route</h2>
+<div class="card">
+<p>Append <code>?ref=0xYourWallet</code> to any paid route below and 40% of that settled sale is credited
+to that wallet in USDC on Base. No signup, no API key, no reporting — attribution is read off the paid request.
+Payouts run monthly above a $1.00 floor. Terms and your running balance: <code>/x402/affiliate?address=0x…</code>;
+public board: <code>/x402/affiliate/leaderboard</code> (deliberately unseeded).</p>
+<p>Starter kit: <a href="https://github.com/edvyno/akari-x402-mcp">github.com/edvyno/akari-x402-mcp</a> — MCP server wrapping
+the paid routes as tools, dry-run by default so it can be reviewed without funds.
+Full terms and the price list: <a href="builder.html">builder program page</a>.</p>
+</div>
 
 <h2>Buyback accounting (20% policy)</h2>
 <div class="card"><table>
