@@ -1,6 +1,6 @@
 {
  "schema": "akari.x402_scoreboard.v1",
- "generated_at": "2026-10-30T13:27:36Z",
+ "generated_at": "2026-10-30T13:39:01Z",
  "method": "Every paid URL published by the 402index directory was requested once. A 402 is graded on its payment-required challenge; a 200 is recorded as free-or-mislisted, never as a broken paywall; a 4xx/5xx/timeout is recorded as a dead listing. Scores weight machine discovery (/.well-known/x402, catalog), a parseable challenge with price+network+payTo, a human-readable 402 body, an MCP surface, and latency.",
  "aggregate": {
   "sellers": 174,
@@ -3115,5 +3115,6 @@
   }
  ],
  "fix_list": "unparseable 402 \u2192 decode-check your payment-required header; dead_url \u2192 your directory entry 404s; opaque_402_body \u2192 put the price in the body text; no_mcp \u2192 add a /mcp initialize+tools/list; no_llms_txt \u2192 add /llms.txt.",
- "request_a_reaudit": "/x402/endpoint-audit?url=<your origin>"
+ "request_a_reaudit": "/x402/endpoint-audit?url=<your origin>",
+ "origin": "https://salary-shaped-partners-wma.trycloudflare.com"
 }
