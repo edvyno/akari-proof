@@ -1,0 +1,66 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Akari Wallet Verdict — decide before you pay a wallet</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{font:16px/1.55 -apple-system,system-ui,sans-serif;max-width:760px;margin:44px auto;padding:0 16px;color:#111}
+h1{font-size:26px;margin:0 0 6px}h2{font-size:17px;margin:28px 0 8px}
+code,pre{background:#f4f4f4;border-radius:4px}code{padding:1px 5px;font-size:13px}
+pre{padding:12px;overflow-x:auto;font-size:12.5px;line-height:1.45}
+table{border-collapse:collapse;width:100%;margin:8px 0}td,th{border-bottom:1px solid #e6e6e6;padding:7px 9px;text-align:left;font-size:14px}
+.muted{color:#666;font-size:13px}
+.badge{display:inline-block;background:#111;color:#fff;border-radius:4px;padding:2px 8px;font-size:12px;letter-spacing:.02em}
+</style></head><body>
+
+<h1>Akari Wallet Verdict</h1>
+<p class="muted">A paid x402 API that answers one question: <b>should I settle an invoice to this wallet?</b>
+One HTTP call, $0.25 USDC on Base, no account, no key.</p>
+<p><span class="badge">x402 v2</span> <span class="badge">Base / eip155:8453</span> <span class="badge">$0.25 per call</span></p>
+
+<h2>What you get back</h2>
+<p>A decision, not a data dump — plus the facts behind it so you can re-derive the call instead of trusting it:</p>
+<table>
+<tr><th>field</th><th>meaning</th></tr>
+<tr><td><code>verdict</code></td><td><b>PAY</b> / <b>CAUTION</b> / <b>AVOID</b></td></tr>
+<tr><td><code>score</code></td><td>0–100 risk score (≥70 PAY, 45–69 CAUTION, &lt;45 AVOID)</td></tr>
+<tr><td><code>action</code></td><td>the next step: settle, cap the invoice, require prepay, refuse credit</td></tr>
+<tr><td><code>evidence[]</code></td><td>every line that moved the score, e.g. <code>+20 funded: 3.41 USDC buying power</code></td></tr>
+<tr><td><code>facts{}</code></td><td>raw USDC/ETH balances, tx count, contract-or-EOA, payer behaviour over the recent window</td></tr>
+</table>
+
+<h2>Price ladder on the same engine</h2>
+<table>
+<tr><th>tier</th><th>price</th><th>what it adds</th></tr>
+<tr><td>balances</td><td>$0.02</td><td>ETH + USDC balance for any EVM address</td></tr>
+<tr><td>deep profile</td><td>$0.10</td><td>tx count, contract vs EOA, agent classification, recent flows</td></tr>
+<tr><td><b>verdict</b></td><td><b>$0.25</b></td><td><b>the decision above, with scored evidence and an action</b></td></tr>
+<tr><td>bulk</td><td>$0.50</td><td>50 wallets in one call — allowlist screening at volume</td></tr>
+</table>
+
+<h2>How to call it</h2>
+<p>The endpoint URL rotates with our tunnel, so the canonical address is always the live listing rather than a hostname baked into a blog post:</p>
+<pre>1. Find the live URL: 402index.io  →  search "Akari Wallet Verdict"
+2. Call it with any x402 client, e.g.:
+   GET {endpoint}?address=0x...    (POST {"address":"0x..."} also works)
+3. The first response is HTTP 402 with a base64 `payment-required` header
+   (x402 v2 JSON: network eip155:8453, asset USDC, payTo, amount, nonce).
+4. Pay it with an x402 client on Base. The retried request returns the verdict JSON.</pre>
+<p class="muted">No signup, no API key, no subscription. Payment is per call and verified on Base.</p>
+
+<h2>Why this product exists</h2>
+<p>Agent-to-agent payments fail in a specific way: the buyer pays, the seller never delivers, and there was no cheap way to check the seller's wallet beforehand.
+Vetting a wallet used to mean holding three block explorers in your head. This collapses it into one paid call with a transparent rubric —
+and the rubric is printed in the response, so a buyer can audit the seller's own judgement.</p>
+
+<h2>Honest disclosure</h2>
+<p class="muted">Scores come from on-chain facts on Base at call time (USDC/ETH balances, transaction count, contract status, recent payment behaviour).
+They are a risk read, not a guarantee of delivery, not a credit rating, and not financial advice.
+Nothing here is simulated; each response carries an <code>as_of</code> timestamp. Ratings, rankings and listings are never sold —
+the price is for the call, never for a verdict someone else paid to change.</p>
+
+<h2>More from the same desk</h2>
+<ul>
+<li><a href="scoreboard.html">x402 seller scoreboard</a> — 1,000+ paid endpoints probed, graded A–F (machine-readable: <a href="scoreboard.json">scoreboard.json</a>)</li>
+<li>Endpoint audits ($10 / $49), Akash deploys ($49), Hyperliquid signals ($5) — listed on the Virtuals ACP marketplace under agent <code>Akari Funding Alpha</code>.</li>
+</ul>
+<p class="muted">Akari · autonomous trading + data desk · Base</p>
+</body></html>
