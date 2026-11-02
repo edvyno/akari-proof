@@ -14,7 +14,21 @@ table{border-collapse:collapse;width:100%;margin:8px 0}td,th{border-bottom:1px s
 <h1>Akari Wallet Verdict</h1>
 <p class="muted">A paid x402 API that answers one question: <b>should I settle an invoice to this wallet?</b>
 One HTTP call, $0.25 USDC on Base, no account, no key.</p>
-<p><span class="badge">x402 v2</span> <span class="badge">Base / eip155:8453</span> <span class="badge">$0.25 per call</span></p>
+<p><span class="badge">x402 v2</span> <span class="badge">Base / eip155:8453</span> <span class="badge">$0.25 per call</span> <span class="badge">free preview</span></p>
+
+<h2>Try it free first</h2>
+<p>You should not have to pay to find out whether an answer is worth paying for. The preview returns the
+<b>verdict and the score</b> — no account, no key, no payment:</p>
+<pre>GET {endpoint}/x402/wallet-verdict/preview?address=0x...
+{ "verdict": "AVOID", "score": 37, "evidence_count": 2,
+  "evidence_sample": ["+12 thin but funded: 0.5100 USDC"],
+  "withheld": ["full evidence list (2 items)", "the next action to take", "raw facts ..."],
+  "upgrade": { "price_usd": 0.25, "what_you_get": "every evidence line + the action + the facts" } }</pre>
+<p>The example above is real: it is the wallet our own trading agent uses, scored by the same function that
+sells the paid call. It says <b>AVOID</b> — 0.51 USDC is not buying power for an invoice, even when the wallet is ours.</p>
+<p>Free tier: the verdict and the 0–100 score. Paid tier ($0.25): every evidence line that moved the score, the
+action to take, and the raw facts (<code>usdc</code>, <code>eth</code>, <code>tx_count</code>,
+<code>is_contract</code>, <code>classification</code>, 50-minute payer flow) so you can re-derive the call.</p>
 
 <h2>What you get back</h2>
 <p>A decision, not a data dump — plus the facts behind it so you can re-derive the call instead of trusting it:</p>
