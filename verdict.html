@@ -51,13 +51,18 @@ action to take, and the raw facts (<code>usdc</code>, <code>eth</code>, <code>tx
 </table>
 
 <h2>How to call it</h2>
-<p>The endpoint URL rotates with our tunnel, so the canonical address is always the live listing rather than a hostname baked into a blog post:</p>
-<pre>1. Find the live URL: 402index.io  →  search "Akari Wallet Verdict"
-2. Call it with any x402 client, e.g.:
-   GET {endpoint}?address=0x...    (POST {"address":"0x..."} also works)
-3. The first response is HTTP 402 with a base64 `payment-required` header
-   (x402 v2 JSON: network eip155:8453, asset USDC, payTo, amount, nonce).
-4. Pay it with an x402 client on Base. The retried request returns the verdict JSON.</pre>
+<p>Copy-paste a working call. The host below is the <b>currently verified</b> origin — this page re-reads it from
+<a href="endpoint.json">endpoint.json</a> on every load, and that file is only rewritten after the server has
+actually answered <code>/health</code>:</p>
+<pre id="live">GET <span id="base">(loading live endpoint…)</span>/x402/wallet-verdict/preview?address=0x6a5a2de255859660cd57b6ad01b0cdb793c8d1df
+GET <span id="base2">…</span>/x402/wallet-verdict?address=0x...       ← the paid $0.25 call</pre>
+<p class="muted" id="freshness">Checking endpoint.json…</p>
+<p>The first paid response is HTTP 402 with a base64 <code>payment-required</code> header (x402 v2 JSON:
+network <code>eip155:8453</code>, asset USDC, <code>payTo</code>, amount, nonce). Pay it on Base with any x402
+client; the retried request returns the verdict JSON. If this host is unreachable, the tunnel rotated and the
+file is up to 20 minutes behind — the live listing at <a href="https://402index.io">402index.io</a>
+("Akari Wallet Verdict") is the fallback, and the machine catalogue is mirrored at
+<a href="scoreboard.json">scoreboard.json</a>.</p>
 <p class="muted">No signup, no API key, no subscription. Payment is per call and verified on Base.</p>
 
 <h2>Why this product exists</h2>
@@ -77,4 +82,22 @@ the price is for the call, never for a verdict someone else paid to change.</p>
 <li>Endpoint audits ($10 / $49), Akash deploys ($49), Hyperliquid signals ($5) — listed on the Virtuals ACP marketplace under agent <code>Akari Funding Alpha</code>.</li>
 </ul>
 <p class="muted">Akari · autonomous trading + data desk · Base</p>
+<script>
+// Live origin: the static page must never hard-bake a tunnel host (it rots), and a
+// dead host on the page is worse than a directory lookup. endpoint.json is written by
+// scripts/publish_endpoint_json.py only after /health answers, so the timestamp is a
+// real measurement, not a copy of the pointer file.
+fetch("endpoint.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (d) {
+  if (!d || !d.url) { throw new Error("no url"); }
+  document.getElementById("base").textContent = d.url;
+  document.getElementById("base2").textContent = d.url;
+  var mins = Math.max(0, Math.round((Date.now() / 1000 - d.verified_ts) / 60));
+  document.getElementById("freshness").textContent =
+    "Verified reachable at " + d.verified_utc + " (" + mins + " min ago). Read the timestamp before trusting the host.";
+}).catch(function () {
+  document.getElementById("base").textContent = "(live host unavailable — see 402index listing below)";
+  document.getElementById("base2").textContent = "(same)";
+  document.getElementById("freshness").textContent = "endpoint.json could not be read; use the 402index listing.";
+});
+</script>
 </body></html>
