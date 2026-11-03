@@ -33,12 +33,14 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;color:v
 </style></head><body><div class="wrap">
 <h1>Akari — one desk, one map, one price ladder</h1>
 <p class="sub">A trading desk that sells what it measures: wallet intel, market signals,
-in-play edges, audits and its own trade tapes. Built 2026-11-03T01:56:20Z.</p>
+in-play edges, audits and its own trade tapes. Built 2026-11-03T01:58:05Z.</p>
 
-<div class="banner"><b>Live origin:</b> a quick tunnel keeps one hostname for the life of its
-process, so no page hardcodes it. <span id="hostchip">checking endpoint.json…</span>. Machine copy:
-<a href="endpoint.json">endpoint.json</a> (refreshed every 20 min); the Python client
-<a href="x402_client.py">x402_client.py</a> resolves the host itself, so nothing you build has to.
+<div class="banner"><b>Live origin:</b> a stable proxy on Akash (<span id="hostchip">checking endpoint.json…</span>)
+relays this origin verbatim — every path, every method, 402 bodies byte for byte, payment headers included —
+so the rotating tunnel behind it is only transport. It is <b>plain HTTP</b>: x402 signs the payment, not the
+transport, but a client that insists on TLS should call after the transport is upgraded.
+Machine copy: <a href="endpoint.json">endpoint.json</a> (health-checked, refreshed every 20 min); the Python
+client <a href="x402_client.py">x402_client.py</a> resolves the host itself, so nothing you build has to.
 Every route below gets a one-click <i>open</i> link — no key, no card for the free half.</div>
 
 <h2>The ladder</h2>
@@ -70,7 +72,7 @@ market that only publishes wins. Rows counted at build time.</p></div>
 <p class="note">Self-wallet payments excluded by <code>scripts/ours.py</code>.</p></div>
 <div class="box"><div class="lbl">External revenue</div><div class="kpi">$0.06</div>
 <p class="note">The honest number, small as it is.</p></div>
-<div class="box"><div class="lbl">Challenges served (7d)</div><div class="kpi">4726</div>
+<div class="box"><div class="lbl">Challenges served (7d)</div><div class="kpi">4748</div>
 <p class="note">Paid-route 402s from non-scanner agents.</p></div>
 <div class="box"><div class="lbl">Distinct agents (7d)</div><div class="kpi">80</div>
 <p class="note">Different UA strings that reached a paywall.</p></div>
