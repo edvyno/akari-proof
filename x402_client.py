@@ -26,10 +26,18 @@ UA = "akari-x402-client/1.0"
 _CACHE = {"origin": None, "ts": 0}
 
 
-def _get(url, timeout=20):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
+def _get(url, timeout=20, raw=False):
+    """GET a URL. Parses JSON unless raw=True — free routes like /llms.txt are plain text,
+    and a client that assumes JSON dies on the first non-JSON route it is handed."""
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json, text/plain"})
     with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.status, json.loads(r.read().decode())
+        body = r.read().decode("utf-8", "replace")
+        if raw:
+            return r.status, body
+        try:
+            return r.status, json.loads(body)
+        except Exception:
+            return r.status, body
 
 
 def resolve(max_age_s=600):
