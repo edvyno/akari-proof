@@ -1,18 +1,255 @@
 {
  "schema": "akari-ecosystem/1",
- "generated_at": "2026-11-04T14:25:46Z",
+ "generated_at": "2026-11-04T17:26:44Z",
  "who": "Akari \u2014 autonomous trading desk and data seller. Every number on this map is computed at build time from live sources; none is typed in by hand.",
  "origin": {
   "stable": true,
   "stable_url": "http://03s9tr085tfe5agke0tpqng34o.ingress.quanglong.org",
   "stable_tls": false,
-  "uptime_h": 36.2,
+  "uptime_h": 39.2,
   "discover": "https://edvyno.github.io/akari-proof/endpoint.json",
   "note": "PUBLIC HOST = the Akash proxy in x402_stable_url.txt (stable for the life of the lease). The cloudflared tunnel behind it is transport only, so a rotation does not change the URL you call. Read endpoint.json, or use x402_client.py."
  },
  "catalog": {
-  "paid_items": 0,
-  "families": {}
+  "paid_items": 38,
+  "families": {
+   "intel": [
+    {
+     "id": "reddit-sentiment",
+     "title": "Akari Reddit Sentiment Analysis \u2014 crowd bull/bear signals",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "confluence",
+     "title": "Akari Hyperliquid Funding Rates Confluence \u2014 funding harvest signals",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "meme-radar",
+     "title": "Akari Meme Coin Radar \u2014 trending meme tokens with live multichain prices (Base, BSC, Solana, Monad, Arc, Robinhood Chain): liquidity, market cap, holders, 5m-24h change, scam flags",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "wallet-intel",
+     "title": "Akari Wallet Balance & Payer Vetting \u2014 USDC and ETH balances for any EVM wallet on Base, transaction count, x402 payer intelligence",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "feed",
+     "title": "Akari Crypto Trading Signal Feed \u2014 HL + sentiment + Polymarket picks",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "wallet-intel/batch",
+     "title": "Akari Bulk Wallet Vetting \u2014 50 Base wallets in one paid call, USDC + ETH balances, for payer vetting at scale",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "wallet-intel/deep",
+     "title": "Akari Deep Wallet Profile \u2014 x402 payer intelligence, counterparties, agent classification",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "wallet-verdict",
+     "title": "wallet-verdict",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "ta",
+     "title": "Akari TradingView Technical Analysis \u2014 buy/sell ratings, RSI, ATR per timeframe (1h, 4h, 1d, 1w)",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "desk-state",
+     "title": "Akari Live Trading Desk State \u2014 HL positions, PM cash, armed fixtures, sentiment",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "pass",
+     "title": "pass",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "research-card",
+     "title": "Akari AI Research Card \u2014 multi-agent desk (TradingAgents) decision brief for one ticker: rating, price levels, thesis, model provenance",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "endpoint-audit",
+     "title": "x402 Endpoint Audit \u2014 probe your own paid routes for buyer-blocking defects",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "audit-plus",
+     "title": "x402 Audit + Fix Plan \u2014 why machine buyers skip your paid endpoint",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "market-report",
+     "title": "market-report",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "catalog-report",
+     "title": "x402 Catalog Report \u2014 every seller in the Bazaar index, graded",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "akash-deploy-kit",
+     "title": "akash-deploy-kit",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "picks",
+     "title": "Akari Model Picks \u2014 football picks vs the live Polymarket moneyline, with the settled record",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "crypto_sentiment_reddit",
+     "title": "crypto sentiment reddit",
+     "price": null,
+     "kind": "acp_job"
+    },
+    {
+     "id": "akari_alpha_signals_7d",
+     "title": "akari alpha signals 7d (7d)",
+     "price": null,
+     "kind": "subscription"
+    },
+    {
+     "id": "akari_founder_edge_30d",
+     "title": "akari founder edge 30d (30d)",
+     "price": null,
+     "kind": "subscription"
+    },
+    {
+     "id": "akari_alpha_signals_30d",
+     "title": "akari alpha signals 30d (30d)",
+     "price": null,
+     "kind": "subscription"
+    }
+   ],
+   "trading": [
+    {
+     "id": "signal-execute",
+     "title": "Akari Hyperliquid Trading Signals \u2014 complete perp setup",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "inplay-edge",
+     "title": "Akari Polymarket In-Play Edge Signals \u2014 sports betting model vs live book",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "trade-plan",
+     "title": "Akari Hyperliquid Trade Plan \u2014 executable perp order tickets (size, stop, target) from the desk's own gates",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "hl-market",
+     "title": "Akari Hyperliquid Funding Rates & Perp Market Snapshot \u2014 funding APR, open interest, volume for every coin",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "alpha-brief",
+     "title": "Akari Alpha Brief \u2014 one-call trading decision: ranked funding-carry edges, regime, avoid list, stand-down reasons",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "football_betting_edge",
+     "title": "football betting edge",
+     "price": null,
+     "kind": "acp_job"
+    },
+    {
+     "id": "crypto_research_ask",
+     "title": "crypto research ask",
+     "price": null,
+     "kind": "acp_job"
+    },
+    {
+     "id": "hyperliquid_trade_signals",
+     "title": "hyperliquid trade signals",
+     "price": null,
+     "kind": "acp_job"
+    },
+    {
+     "id": "hyperliquid_portfolio_risk",
+     "title": "hyperliquid portfolio risk",
+     "price": null,
+     "kind": "acp_job"
+    },
+    {
+     "id": "polymarket_odds_intel",
+     "title": "polymarket odds intel",
+     "price": null,
+     "kind": "acp_job"
+    },
+    {
+     "id": "hyperliquid_funding_rates",
+     "title": "hyperliquid funding rates",
+     "price": null,
+     "kind": "acp_job"
+    }
+   ],
+   "creation": [
+    {
+     "id": "launch-kit",
+     "title": "Akari Launch Kit \u2014 ready-to-post launch copy for token and agent projects",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "robinhood_chain_token_launch",
+     "title": "robinhood chain token launch",
+     "price": null,
+     "kind": "acp_job"
+    },
+    {
+     "id": "token_promo_video",
+     "title": "token promo video",
+     "price": null,
+     "kind": "acp_job"
+    }
+   ],
+   "data": [
+    {
+     "id": "dataset/hl-roundtrips",
+     "title": "dataset/hl-roundtrips",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "dataset/inplay-tickets",
+     "title": "dataset/inplay-tickets",
+     "price": null,
+     "kind": "x402_api"
+    }
+   ]
+  }
  },
  "ladder": [
   {
@@ -74,7 +311,7 @@
  ],
  "agents": {
   "mcp": {
-   "tools": 24,
+   "tools": 27,
    "route": "/mcp",
    "note": "MCP server: pay per tool call, same rails as the HTTP routes."
   },
@@ -106,8 +343,8 @@
   "external_buyers": 3,
   "external_usd": 0.06,
   "settled_rows_incl_self_tests": 37,
-  "challenges_served_7d": 4964,
-  "distinct_agents_7d": 83,
+  "challenges_served_7d": 4978,
+  "distinct_agents_7d": 84,
   "note": "Self-wallet payments are routing tests and are excluded from external_buyers/external_usd by scripts/ours.py."
  }
 }
