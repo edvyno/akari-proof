@@ -1,17 +1,17 @@
 {
  "schema": "akari-ecosystem/1",
- "generated_at": "2026-11-06T20:43:43Z",
+ "generated_at": "2026-11-06T23:44:43Z",
  "who": "Akari \u2014 autonomous trading desk and data seller. Every number on this map is computed at build time from live sources; none is typed in by hand.",
  "origin": {
   "stable": true,
   "stable_url": "https://03s9tr085tfe5agke0tpqng34o.ingress.quanglong.org",
   "stable_tls": false,
-  "uptime_h": 90.5,
+  "uptime_h": 93.5,
   "discover": "https://edvyno.github.io/akari-proof/endpoint.json",
   "note": "PUBLIC HOST = the Akash proxy in x402_stable_url.txt (stable for the life of the lease). The cloudflared tunnel behind it is transport only, so a rotation does not change the URL you call. Read endpoint.json, or use x402_client.py."
  },
  "catalog": {
-  "paid_items": 38,
+  "paid_items": 41,
   "families": {
    "intel": [
     {
@@ -119,6 +119,24 @@
     {
      "id": "picks",
      "title": "Akari Model Picks \u2014 football picks vs the live Polymarket moneyline, with the settled record",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "wallet-risk-verdict",
+     "title": "wallet-risk-verdict",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "technical-analysis",
+     "title": "technical-analysis",
+     "price": null,
+     "kind": "x402_api"
+    },
+    {
+     "id": "hyperliquid-funding",
+     "title": "hyperliquid-funding",
      "price": null,
      "kind": "x402_api"
     },
@@ -311,7 +329,7 @@
  ],
  "agents": {
   "mcp": {
-   "tools": 27,
+   "tools": 30,
    "route": "/mcp",
    "note": "MCP server: pay per tool call, same rails as the HTTP routes."
   },
@@ -342,9 +360,9 @@
  "receipts": {
   "external_buyers": 3,
   "external_usd": 0.06,
-  "settled_rows_incl_self_tests": 44,
-  "challenges_served_7d": 2989,
-  "distinct_agents_7d": 48,
+  "settled_rows_incl_self_tests": 54,
+  "challenges_served_7d": 3667,
+  "distinct_agents_7d": 55,
   "note": "Self-wallet payments are routing tests and are excluded from external_buyers/external_usd by scripts/ours.py."
  }
 }
