@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>x402 field guide — measured, not marketed</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Five measured lessons on selling x402 endpoints: the 200-on-a-paid-path defect, accepts[0].amount, discovery matching, paid MCP calls, publishing your own numbers.">
+<style>
+:root{--bg:#0e1013;--card:#16191f;--ink:#e8eaee;--dim:#9aa3af;--acc:#7ee787;--warn:#ffb86b;--line:#242a33}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);
+font:16px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 90px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 10px;letter-spacing:-.02em}
+h2{font-size:1.15rem;margin:0 0 10px}
+p{margin:0 0 12px}.lede{color:var(--dim);font-size:1.05rem}
+.stat{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 34px}
+.stat div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;min-width:150px}
+.stat b{display:block;font-size:1.45rem;color:var(--acc);font-variant-numeric:tabular-nums}
+.stat span{color:var(--dim);font-size:.82rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:0 0 16px}
+.card .n{color:var(--acc);font:600 .78rem/1 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:#0b0d10;border:1px solid var(--line);border-radius:8px;padding:12px 14px;overflow-x:auto;font-size:.86rem}
+code{background:#0b0d10;padding:.12em .38em;border-radius:4px;font-size:.9em}
+.fix{border-left:3px solid var(--acc);padding-left:14px;color:var(--ink);margin:12px 0 0}
+a{color:var(--acc)}footer{color:var(--dim);font-size:.9rem;border-top:1px solid var(--line);margin-top:40px;padding-top:18px}
+</style></head><body><div class="wrap">
+<h1>x402 field guide</h1>
+<p class="lede">Five lessons from grading 791 sellers and running our own paid endpoints.
+Every number here was measured by calling the route once, unauthenticated, with no payment.</p>
+<div class="stat">
+<div><b>791</b><span>sellers graded</span></div>
+<div><b>645</b><span>advertise a paid route</span></div>
+<div><b>462</b><span>return a real 402</span></div>
+<div><b>306</b><span>answer 200 instead</span></div>
+<div><b>242</b><span>serve live MCP</span></div>
+</div>
+<section class="card"><h2>01 — the 200-on-a-paid-path defect</h2><p>Of 645 sellers that advertise a paid route, <b>306</b> answer <code>200</code> to an unauthenticated GET. A buyer following their own documentation is never asked to pay.</p><pre>curl -s -o /dev/null -w '%{http_code}' https://your-host/your-paid-path   # must be 402</pre><p class="fix">Require 402 on every path you list as paid. A 200 means your paywall is not in the request path at all.</p></section><section class="card"><h2>02 — where the price actually lives</h2><p>The number in <code>maxAmountRequired</code> is the advertised ceiling. The amount a client must authorise is <code>accepts[0].amount</code>, in micro-USDC. Our own live challenge right now: <b>20000</b> (= $0.02) on <code>eip155:8453</code>.</p><pre>curl -si https://your-host/your-paid-path | sed -n '/^{/,$p'   # read accepts[0].amount</pre><p class="fix">Print accepts[0].amount, not the ceiling, and compare it with the price on your homepage.</p></section><section class="card"><h2>03 — payable is not discoverable</h2><p>Indexes match a merchant name and a URL path. Descriptions, tags and service names are stored and then ignored by the matcher. A product called “wallet risk verdict” under <code>/analytics</code> is invisible to the agent searching for exactly that.</p><pre>GET /discovery/search?query=&lt;intent&gt;&amp;limit=20   # 20 is the max; 30 returns HTTP 400</pre><p class="fix">Ship an intent-shaped alias path that stays payable, and keep the description for humans.</p></section><section class="card"><h2>04 — agents buy tools, not homepages</h2><p><b>242</b> of 791 sellers we graded serve a live MCP endpoint. The paid call is a <code>tools/call</code> with the payment attached under <code>params._meta['x402/payment']</code>.</p><pre>POST /mcp {"method":"tools/call","params":{"name":"price","_meta":{"x402/payment":…}}}</pre><p class="fix">If initialize and tools/list answer but a paid tools/call does not, you have a demo, not a product.</p></section><section class="card"><h2>05 — publish your own numbers</h2><p>Our lifetime external revenue is <b>$0.06</b> from <b>3</b> buyers. 51 of 54 settled payments were our own test settles.</p><pre>SELECT count(DISTINCT payer) FROM sales WHERE status='settled' AND payer NOT IN (your_wallets)</pre><p class="fix">Count distinct payers, exclude your own wallets, print the last sale date. If it embarrasses you, that is the number to work on.</p></section>
+<section class="card"><h2>Check any seller, free</h2>
+<p>Raw ledger with method and column definitions: <a href="https://edvyno.github.io/akari-proof/scoreboard.json">scoreboard.json</a>.
+One seller's page and an embeddable badge: <code>/seller?host=&lt;host&gt;</code> and
+<code>/seller/badge.svg?host=&lt;host&gt;</code> on our origin.</p>
+<p>Machine-readable storefront for agents, cheapest route first: <a href="https://edvyno.github.io/akari-proof/agents.json">agents.json</a>.</p></section>
+<footer>Ratings and rankings are not for sale. Our own weak numbers stay on this page:
+$0.06 lifetime from 3 buyers. Long form:
+<a href="https://dev.to/edvyno/i-probed-791-x402-sellers-306-answer-200-on-a-path-they-call-paid-4500">dev.to</a>.</footer>
+</div></body></html>
