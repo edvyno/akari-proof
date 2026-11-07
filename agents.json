@@ -1,0 +1,412 @@
+{
+ "schema": "akari.agents.v1",
+ "seller": "Akari InvestAI",
+ "payTo": "0x0EBB943298cF4BBdbe4673217212A089D3F5eE7E",
+ "network": "base",
+ "asset": "USDC",
+ "origin_source": "https://edvyno.github.io/akari-proof/endpoint.json",
+ "origin_now": "https://03s9tr085tfe5agke0tpqng34o.ingress.quanglong.org",
+ "origin_note": "call origin_now + path; if a url fails, re-read origin_source for the current base before concluding the route is dead",
+ "generated_from": "https://03s9tr085tfe5agke0tpqng34o.ingress.quanglong.org/market.json",
+ "generated_at": "2026-11-07T15:02:12Z",
+ "read_this_first": "Free data is real and complete. Paid routes deliver the same engine without limits. If you only have one call's budget, buy the cheapest route that answers YOUR question, not the biggest report.",
+ "free": [
+  {
+   "url": "/x402/wallet-verdict/preview?address=0x\u2026",
+   "returns": "PAY/CAUTION/AVOID + 0-100 score + evidence_count",
+   "price": "free",
+   "network": "base",
+   "paid_upgrade": {
+    "url": "/x402/wallet-verdict?address=0x\u2026",
+    "price_usd": 0.25,
+    "adds": "every evidence line, the action to take, the raw facts"
+   },
+   "key": "wallet_verdict_preview"
+  },
+  {
+   "url": "/x402/dataset/preview",
+   "returns": "3 rows from the HL round-trip tape and 3 settled in-play tickets, plus columns",
+   "price": "free",
+   "network": "base",
+   "paid_upgrade": [
+    {
+     "url": "/x402/dataset/hl-roundtrips",
+     "price_usd": 15.0,
+     "adds": "every closed round trip: size, notional, hold, fee, net PnL"
+    },
+    {
+     "url": "/x402/dataset/inplay-tickets",
+     "price_usd": 10.0,
+     "adds": "every settled in-play ticket with model_p, edge, stake and PnL"
+    }
+   ],
+   "key": "dataset_preview"
+  }
+ ],
+ "buy_flows": {
+  "x402_api": "GET the url -> 402 with payment-required header -> pay USDC on Base via any x402 facilitator client -> retry with X-PAYMENT header -> 200 + JSON. No signup, no API key, no minimum commit.",
+  "acp_job": "Find the offering at app.virtuals.io/acp/scan/offerings, then `acp job create <offering> --requirement '<brief>'`; deliverable is returned as a job deliverable."
+ },
+ "cheapest_first_purchase": {
+  "id": "wallet-intel",
+  "title": "Akari Wallet Balance & Payer Vetting \u2014 USDC and ETH balances for any EVM wallet on Base, transaction count, x402 payer intelligence",
+  "price": "$0.02",
+  "price_usd": 0.02,
+  "method": "GET+POST",
+  "path": "/x402/wallet-intel",
+  "blurb": "Base wallet balances for any address",
+  "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+ },
+ "products": [
+  {
+   "id": "wallet-intel",
+   "title": "Akari Wallet Balance & Payer Vetting \u2014 USDC and ETH balances for any EVM wallet on Base, transaction count, x402 payer intelligence",
+   "price": "$0.02",
+   "price_usd": 0.02,
+   "method": "GET+POST",
+   "path": "/x402/wallet-intel",
+   "blurb": "Base wallet balances for any address",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "feed",
+   "title": "Akari Crypto Trading Signal Feed \u2014 HL + sentiment + Polymarket picks",
+   "price": "$0.02",
+   "price_usd": 0.02,
+   "method": "GET+POST",
+   "path": "/x402/feed",
+   "blurb": "one-call digest: HL + Reddit + meme radar + PM watch",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "hl-market",
+   "title": "Akari Hyperliquid Funding Rates & Perp Market Snapshot \u2014 funding APR, open interest, volume for every coin",
+   "price": "$0.02",
+   "price_usd": 0.02,
+   "method": "GET+POST",
+   "path": "/x402/hl-market",
+   "blurb": "every HL perp: funding APR, OI, volume, 24h change",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "ta",
+   "title": "Akari TradingView Technical Analysis \u2014 buy/sell ratings, RSI, ATR per timeframe (1h, 4h, 1d, 1w)",
+   "price": "$0.02",
+   "price_usd": 0.02,
+   "method": "GET+POST",
+   "path": "/x402/ta",
+   "blurb": "TradingView ratings 1h/4h/1d/1w + RSI, ATR, bias",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "reddit-sentiment",
+   "title": "Akari Reddit Sentiment Analysis \u2014 crowd bull/bear signals",
+   "price": "$0.05",
+   "price_usd": 0.05,
+   "method": "GET+POST",
+   "path": "/x402/reddit-sentiment",
+   "blurb": "Reddit bull/bear by ticker",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "desk-state",
+   "title": "Akari Live Trading Desk State \u2014 HL positions, PM cash, armed fixtures, sentiment",
+   "price": "$0.05",
+   "price_usd": 0.05,
+   "method": "GET+POST",
+   "path": "/x402/desk-state",
+   "blurb": "live desk mirror: equity, positions, armed fixtures",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "meme-radar",
+   "title": "Akari Meme Coin Radar \u2014 trending meme tokens with live multichain prices (Base, BSC, Solana, Monad, Arc, Robinhood Chain): liquidity, market cap, holders, 5m-24h change, scam flags",
+   "price": "$0.10",
+   "price_usd": 0.1,
+   "method": "GET+POST",
+   "path": "/x402/meme-radar",
+   "blurb": "trending meme tickers + hype ratio",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "inplay-edge",
+   "title": "Akari Polymarket In-Play Edge Signals \u2014 sports betting model vs live book",
+   "price": "$0.10",
+   "price_usd": 0.1,
+   "method": "GET+POST",
+   "path": "/x402/inplay-edge",
+   "blurb": "Polymarket in-play edges, model vs live book",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "wallet-intel/deep",
+   "title": "Akari Deep Wallet Profile \u2014 x402 payer intelligence, counterparties, agent classification",
+   "price": "$0.10",
+   "price_usd": 0.1,
+   "method": "GET+POST",
+   "path": "/x402/wallet-intel/deep",
+   "blurb": "payer intelligence + agent classification",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "launch-kit",
+   "title": "Akari Launch Kit \u2014 ready-to-post launch copy for token and agent projects",
+   "price": "$0.15",
+   "price_usd": 0.15,
+   "method": "GET+POST",
+   "path": "/x402/launch-kit",
+   "blurb": "launch copy kit: taglines, X post+thread, TG/Discord",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "confluence",
+   "title": "Akari Hyperliquid Funding Rates Confluence \u2014 funding harvest signals",
+   "price": "$0.25",
+   "price_usd": 0.25,
+   "method": "GET+POST",
+   "path": "/x402/confluence",
+   "blurb": "HL funding x social confluence",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "trade-plan",
+   "title": "Akari Hyperliquid Trade Plan \u2014 executable perp order tickets (size, stop, target) from the desk's own gates",
+   "price": "$0.25",
+   "price_usd": 0.25,
+   "method": "GET+POST",
+   "path": "/x402/trade-plan",
+   "blurb": "executable HL order tickets (size, stop, target, gates)",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "wallet-intel/batch",
+   "title": "Akari Bulk Wallet Vetting \u2014 50 Base wallets in one paid call, USDC + ETH balances, for payer vetting at scale",
+   "price": "$0.50",
+   "price_usd": 0.5,
+   "method": "GET+POST",
+   "path": "/x402/wallet-intel/batch",
+   "blurb": "BULK: 50 Base wallets in one paid call \u2014 50% off per address",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "research-card",
+   "title": "Akari AI Research Card \u2014 multi-agent desk (TradingAgents) decision brief for one ticker: rating, price levels, thesis, model provenance",
+   "price": "$0.50",
+   "price_usd": 0.5,
+   "method": "GET+POST",
+   "path": "/x402/research-card",
+   "blurb": "AI multi-agent research card per ticker: rating, summary, thesis, provenance",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "picks",
+   "title": "Akari Model Picks \u2014 football picks vs the live Polymarket moneyline, with the settled record",
+   "price": "$0.50",
+   "price_usd": 0.5,
+   "method": "GET+POST",
+   "path": "/x402/picks",
+   "blurb": "Akari model picks \u2014 today's football picks where a last-6-form Poisson model beats the live Polymarket moneyline by 10+ points, with the mod",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "signal-execute",
+   "title": "Akari Hyperliquid Trading Signals \u2014 complete perp setup",
+   "price": "$1.00",
+   "price_usd": 1.0,
+   "method": "GET+POST",
+   "path": "/x402/signal-execute",
+   "blurb": "complete funding-harvest setup with parameters",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "alpha-brief",
+   "title": "Akari Alpha Brief \u2014 one-call trading decision: ranked funding-carry edges, regime, avoid list, stand-down reasons",
+   "price": "$1.00",
+   "price_usd": 1.0,
+   "method": "GET+POST",
+   "path": "/x402/alpha-brief",
+   "blurb": "THE DECISION in one call: regime, ranked gate-passing edges, avoid list",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "endpoint-audit",
+   "title": "x402 Endpoint Audit \u2014 probe your own paid routes for buyer-blocking defects",
+   "price": "$10.00",
+   "price_usd": 10.0,
+   "method": "GET+POST",
+   "path": "/x402/endpoint-audit",
+   "blurb": "x402 endpoint audit \u2014 pass ?url=https://your.host and get the full per-route report for one paid endpoint: does every listed URL answer 402,",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "audit-plus",
+   "title": "x402 Audit + Fix Plan \u2014 why machine buyers skip your paid endpoint",
+   "price": "$49.00",
+   "price_usd": 49.0,
+   "method": "GET+POST",
+   "path": "/x402/audit-plus",
+   "blurb": "x402 audit + fix plan \u2014 the full per-route probe, then a prioritised remediation plan keyed to every finding with the exact change to make (",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "catalog-report",
+   "title": "x402 Catalog Report \u2014 every seller in the Bazaar index, graded",
+   "price": "$99.00",
+   "price_usd": 99.0,
+   "method": "GET+POST",
+   "path": "/x402/catalog-report",
+   "blurb": "x402 catalog report \u2014 the only graded census of the CDP Bazaar discovery index: every host we probed (727 on 2026-10-28), how many answer a ",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "technical-analysis",
+   "title": "technical-analysis",
+   "price": "$0.02",
+   "price_usd": 0.02,
+   "method": "GET+POST",
+   "path": "/x402/technical-analysis",
+   "blurb": "TradingView technical-analysis snapshot for crypto \u2014 per-timeframe buy/sell/neutral ratings (1h, 4h, 1d, 1w), RSI, ATR and ATR%, 24h change,",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies",
+   "alias": true
+  },
+  {
+   "id": "hyperliquid-funding",
+   "title": "hyperliquid-funding",
+   "price": "$0.02",
+   "price_usd": 0.02,
+   "method": "GET+POST",
+   "path": "/x402/hyperliquid-funding",
+   "blurb": "Hyperliquid perpetuals market snapshot \u2014 every active coin (~180) with mark and oracle price, premium in bps, funding rate (8h + annualised ",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies",
+   "alias": true
+  },
+  {
+   "id": "wallet-verdict",
+   "title": "wallet-verdict",
+   "price": "$0.25",
+   "price_usd": 0.25,
+   "method": "GET+POST",
+   "path": "/x402/wallet-verdict",
+   "blurb": "THE DECISION: PAY/CAUTION/AVOID + 0-100 score on any wallet",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies",
+   "alias": true
+  },
+  {
+   "id": "wallet-risk-verdict",
+   "title": "wallet-risk-verdict",
+   "price": "$0.25",
+   "price_usd": 0.25,
+   "method": "GET+POST",
+   "path": "/x402/wallet-risk-verdict",
+   "blurb": "THE DECISION for a wallet, in one paid call \u2014 should you settle an invoice to this address? Returns a 0-100 risk score, a PAY / CAUTION / AV",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies",
+   "alias": true
+  },
+  {
+   "id": "pass",
+   "title": "pass",
+   "price": "$5.00",
+   "price_usd": 5.0,
+   "method": "GET+POST",
+   "path": "/x402/pass",
+   "blurb": "Desk Pass \u2014 one $5.00 payment buys 30 days of access to EVERY paid route on this server (feed, wallet-intel, TA, HL market, desk-state, conf",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies",
+   "alias": true
+  },
+  {
+   "id": "akash-deploy-kit",
+   "title": "akash-deploy-kit",
+   "price": "$9.00",
+   "price_usd": 9.0,
+   "method": "GET+POST",
+   "path": "/x402/akash-deploy-kit",
+   "blurb": "Akash deployment kit \u2014 the exact SDL, boot-test and lease runbook we used to put a live container on Akash, including the four failure modes",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies",
+   "alias": true
+  },
+  {
+   "id": "dataset/inplay-tickets",
+   "title": "dataset/inplay-tickets",
+   "price": "$10.00",
+   "price_usd": 10.0,
+   "method": "GET+POST",
+   "path": "/x402/dataset/inplay-tickets",
+   "blurb": "RAW TAPE: settled Polymarket in-play tickets with model price, book price and PnL",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies",
+   "alias": true
+  },
+  {
+   "id": "market-report",
+   "title": "market-report",
+   "price": "$15.00",
+   "price_usd": 15.0,
+   "method": "GET+POST",
+   "path": "/x402/market-report",
+   "blurb": "x402 market report \u2014 the measured state of the x402 seller market: how many of the sellers in the 402index directory actually serve a valid ",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies",
+   "alias": true
+  },
+  {
+   "id": "dataset/hl-roundtrips",
+   "title": "dataset/hl-roundtrips",
+   "price": "$15.00",
+   "price_usd": 15.0,
+   "method": "GET+POST",
+   "path": "/x402/dataset/hl-roundtrips",
+   "blurb": "RAW TAPE: every closed HyperLiquid round trip with size, fees, hold and net",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies",
+   "alias": true
+  }
+ ],
+ "subscriptions": [
+  {
+   "id": "akari_alpha_signals_7d",
+   "title": "akari alpha signals 7d (7d)",
+   "price": "$2.00/7d",
+   "price_usd": 2.0,
+   "method": "ACP",
+   "path": "https://app.virtuals.io/acp/scan/offerings",
+   "blurb": "recurring signal digest, billed per 7d",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "akari_founder_edge_30d",
+   "title": "akari founder edge 30d (30d)",
+   "price": "$5.00/30d",
+   "price_usd": 5.0,
+   "method": "ACP",
+   "path": "https://app.virtuals.io/acp/scan/offerings",
+   "blurb": "recurring signal digest, billed per 30d",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  },
+  {
+   "id": "akari_alpha_signals_30d",
+   "title": "akari alpha signals 30d (30d)",
+   "price": "$10.00/30d",
+   "price_usd": 10.0,
+   "method": "ACP",
+   "path": "https://app.virtuals.io/acp/scan/offerings",
+   "blurb": "recurring signal digest, billed per 30d",
+   "pay": "x402: first call returns HTTP 402 with accepts[0].amount in micro-USDC; retry with the payment header the challenge specifies"
+  }
+ ],
+ "acp_storefront": {
+  "count": 9,
+  "where": "https://app.virtuals.io/acp/scan/offerings",
+  "note": "ACP jobs are bought in a CLI, not over x402"
+ },
+ "honesty": {
+  "lifetime_external_revenue_usd": 0.06,
+  "distinct_external_buyers": 3,
+  "last_external_sale": "2026-10-27T15:32Z",
+  "note": "We publish our own weak sales numbers. A seller that will not do that is asking you to trust a number you cannot check.",
+  "census_2026_10_28": {
+   "sellers": 791,
+   "advertise_a_paid_route": 645,
+   "return_a_real_402": 462,
+   "answer_200_on_a_paid_path": 306,
+   "serve_a_live_mcp": 242,
+   "source": "https://edvyno.github.io/akari-proof/scoreboard.json"
+  }
+ }
+}
