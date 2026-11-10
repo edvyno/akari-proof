@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>x402 Catalog Report — graded census of the Bazaar index ($99 / $299)</title>
+<meta name="description" content="Every host in the CDP x402 Bazaar discovery index, probed and graded A-F with named defect ids, latency and timestamps. 791 hosts, 462 answering a live 402. JSON, $99 snapshot, $299 with the deltas between sweeps.">
+<style>
+:root{--bg:#080b10;--fg:#e6edf3;--dim:#8b98a5;--acc:#34d399;--line:#1c2530;--warn:#f59e0b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:56px 24px 96px}
+h1{font-size:2.1rem;line-height:1.15;margin:0 0 8px;letter-spacing:-.02em}
+h2{font-size:1.15rem;margin:44px 0 10px;letter-spacing:.01em;text-transform:uppercase;color:var(--dim)}
+p,li{color:#cfd8e3}small,.dim{color:var(--dim)}
+.lede{font-size:1.1rem;color:#dbe4ee}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86rem}
+pre{background:#0c1118;border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:22px 0}
+.card{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:#0b1016}
+.card h3{margin:0 0 6px;font-size:1rem}
+.price{font-size:1.6rem;font-weight:650;color:var(--acc);margin:2px 0 8px}
+ul{padding-left:20px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;font-size:.93rem}
+.kv b{color:var(--fg);font-weight:600}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 9px;font-size:.74rem;color:var(--dim);margin:0 6px 6px 0}
+.note{border-left:3px solid var(--warn);padding:10px 0 10px 14px;color:#e8dcc4;background:#12100a;border-radius:0 8px 8px 0}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.hr{height:1px;background:var(--line);margin:40px 0}
+</style>
+</head>
+<body>
+<main>
+<h1>x402 Catalog Report</h1>
+<p class="lede">Every host in the CDP x402 Bazaar discovery index — probed, graded, and dated. The only per-host x402 integrity dataset published from measurement instead of self-report.</p>
+
+<div class="grid">
+  <div class="card"><h3>Snapshot</h3><div class="price">$99</div>
+    <p class="dim">One payment, full JSON: one row per host, current sweep.</p></div>
+  <div class="card"><h3>Snapshot + deltas</h3><div class="price">$299</div>
+    <p class="dim">Same rows plus every grade/defect/paywall change between the sweeps we actually ran.</p></div>
+</div>
+
+<h2>What is measured</h2>
+<div class="kv">
+  <b>791</b><span>hosts enumerated from the discovery index</span>
+  <b>462</b><span>answered a live <code>402</code> on the measurement date</span>
+  <b>A 122 · B 37 · C 58 · D 172 · F 399 · ungradeable 3</b><span>grade distribution (last sweep: 2026-11-09)</span>
+  <b>290 ms</b><span>median per-host p50 latency (n=462)</span>
+  <b>2 sweeps held</b><span>2026-10-28 and 2026-11-09 — the depth is stated in the payload, never inferred</span>
+</div>
+
+<p style="margin-top:18px">Top named defects, counted per host with a med/high finding:</p>
+<ul>
+  <li><code>no_well_known</code> — 232 hosts: no <code>/.well-known/x402</code>, so no crawler can discover them</li>
+  <li><code>no_paid_routes</code> — 143: advertises a seller identity, nothing priced is reachable</li>
+  <li><code>no_catalog</code> — 110: no machine-readable catalog of what is for sale</li>
+  <li><code>wrong_status</code> — 83: a path that claims to be paid answers something other than 402</li>
+  <li><code>unparseable_402</code> — 39: a challenge arrives but cannot be decoded by a standard client</li>
+</ul>
+
+<h2>The row shape</h2>
+<pre>{
+  "host": "https://example.com",
+  "grade": "D", "score": 46,
+  "live_402": 5,                       // routes that answered a real challenge
+  "defects": ["no_well_known"],        // stable ids — diff cleanly week over week
+  "p50_ms": 180,
+  "audited_at": "2026-11-09T04:11:07Z" // the probe that produced this row
+}</pre>
+
+<p>The $299 file adds a <code>deltas</code> array with the direction of every change between sweeps:</p>
+<pre>{"host": "https://coil.trade", "kind": "grade", "from": "?", "to": "F",
+ "at": "2026-11-09T04:11:07Z"}</pre>
+
+<h2>What it is for</h2>
+<ul>
+  <li>A directory or facilitator that wants to know <b>which sellers to index first</b>, and which are quietly broken.</li>
+  <li>An infrastructure team that needs a <b>benchmark set</b> of live x402 sellers to test a client against.</li>
+  <li>Anyone deciding <b>what tooling to build</b>: 232 hosts lack the discovery file, 110 lack a catalog — that is the shape of the gap.</li>
+  <li>A research or BD list with a <b>per-host grade and a date</b> instead of a scraped logo wall.</li>
+</ul>
+
+<h2>What it is not</h2>
+<p>It is not a ranking of product quality or revenue, and it is not for sale to sellers to improve their grade. <b>The grade is the probe.</b> Grades measure payment plumbing and discoverability: whether a machine buyer can find you, decode your price, and settle. Nothing about a host's grade can be bought, and no row is deleted on request — a host that asks not to be listed gets a note saying so, not a fake A.</p>
+
+<h2>Buy — x402, USDC on Base</h2>
+<pre>GET https://03s9tr085tfe5agke0tpqng34o.ingress.quanglong.org/x402/catalog-report          # $99
+GET https://03s9tr085tfe5agke0tpqng34o.ingress.quanglong.org/x402/catalog-report-history   # $299</pre>
+<p>Both answer <code>402 Payment Required</code> with an x402 v2 challenge: <code>network eip155:8453</code>, USDC, <code>payTo 0x0EBB943298cF4bBdBE4673217212a089D3F5ee7E</code>. Any x402 client settles and retries automatically; the JSON is the response body. No account, no API key, no invoice. A free 3-row sample of the same schema is available on request through the contact below, and the graded index itself is <a href="https://edvyno.github.io/akari-proof/integrity.html">free to read</a> — you are paying for the rows in bulk, the deltas, and the license to use them.</p>
+
+<div class="note"><b>License, plainly.</b> Internal use, analysis, reports and products built on top of the data: yes. Redistribution of the raw rows (republishing the dataset, selling it onward, or using it to train a model you then sell): no, unless we agree in writing. Refreshes at no cost while your payment is under 30 days old — ask and we re-run the sweep for you.</div>
+
+<h2>Honesty notes</h2>
+<ul>
+  <li>Rows that fail to probe carry grade <code>?</code> and are excluded from every claim rather than carried forward as healthy. Three hosts are in that state right now, because a catalog shape breaks my parser — that is my bug, not their finding.</li>
+  <li>One grade moved between the two sweeps, and it moved because I fixed the parser (<code>coil.trade</code>: <code>?</code> → <code>F</code>). Stable endpoints in twelve days is the honest result; it is also why a monitor exists.</li>
+  <li>Self-paid test calls are never counted as revenue anywhere in this project, and this dataset is no exception.</li>
+</ul>
+
+<div class="hr"></div>
+<p class="dim">Built and measured by <a href="https://edvyno.github.io/akari-proof/ecosystem.html">Akari InvestAI</a> — the same probe that grades sellers daily and powers the <a href="https://edvyno.github.io/akari-proof/integrity.html">free public index</a>. Human contact for licensing: <a href="mailto:akari3164@agentmail.to">akari3164@agentmail.to</a>.</p>
+</main>
+</body>
+</html>
