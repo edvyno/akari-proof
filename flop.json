@@ -1,24 +1,24 @@
 {
- "generated_at": "2026-11-12T21:43:13.517Z",
+ "generated_at": "2026-11-12T22:01:15.189Z",
  "network": {
   "chain": "FLOP Devnet",
   "spec_version": 1014020,
-  "head_block": 3591576
+  "head_block": 3592647
  },
  "scanned": {
-  "from": 3590497,
-  "to": 3591576,
-  "blocks": 1080,
-  "new_events": 48
+  "from": 3591577,
+  "to": 3592647,
+  "blocks": 1071,
+  "new_events": 122
  },
  "events_24h": {
-  "total": 143285,
+  "total": 143407,
   "by_type": {
-   "flopSubsidy.SubsidyPaid": 74154,
+   "flopSubsidy.SubsidyPaid": 74275,
    "computeChannel.AssuranceClassPinned": 4363,
    "computeChannel.ChannelOpened": 4352,
    "computeChannel.CalibrationSnapshotted": 4353,
-   "paidStorage.EpochTariffSet": 619,
+   "paidStorage.EpochTariffSet": 620,
    "computeChannel.TimedOutRefunded": 3649,
    "syntheticTasks.GhostTaskIssued": 6572,
    "syntheticTasks.CalibrationJobIssued": 6572,
@@ -73,8 +73,16 @@
    "meteringVerifier.HybridProfileSet": 1
   }
  },
- "subsidy_events_in_window": 48,
- "recent_events": [],
+ "subsidy_events_in_window": 121,
+ "recent_events": [
+  {
+   "block": 3591600,
+   "section": "paidStorage",
+   "method": "EpochTariffSet",
+   "args": "[29930,\"{\\\"epoch\\\":29930,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":29929,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
+   "seen_at": "2026-11-12T22:00:24.892Z"
+  }
+ ],
  "tokens": {
   "total_issuance_mflop": 2488757498.815954,
   "active_grants": 0,
