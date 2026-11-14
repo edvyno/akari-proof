@@ -1,0 +1,97 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>x402 method audit — 22 of 78 sellers answer POST</title>
+<meta name="description" content="Machine-generated measurement: 78 x402 sellers, 137 paid routes POSTed. 71.8% never return a 402 to the method most agent clients use.">
+<style>
+:root{--bg:#080b10;--ink:#e7f0ee;--dim:#7fa39a;--line:#16302a;--em:#34d399;--warn:#fca5a5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif}
+header,main{max-width:900px;margin:0 auto;padding:0 22px}header{padding:48px 22px 8px}
+h1{font-size:32px;margin:0 0 8px;letter-spacing:-.5px}h2{font-size:19px;margin:36px 0 8px}
+.sub{color:var(--dim);max-width:720px}.kpis{display:flex;gap:32px;flex-wrap:wrap;margin:28px 0 8px}
+.kpi b{display:block;font-size:30px;color:var(--em)}.kpi.bad b{color:var(--warn)}
+.kpi span{color:var(--dim);font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--dim);font-weight:500}td.n{text-align:right;font-variant-numeric:tabular-nums}
+code{background:#0d1418;padding:2px 6px;border-radius:5px;font-size:13px}
+pre{background:#0d1418;border:1px solid var(--line);border-radius:10px;padding:14px;overflow-x:auto;font-size:13px}
+ul{padding-left:20px}ul.pass{columns:2;list-style:none;padding:0;font-size:13px;color:var(--dim)}
+a{color:var(--em);text-decoration:none}a:hover{text-decoration:underline}
+.cta{border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:32px 0;background:#0b1116}
+.muted{color:var(--dim);font-size:13px}
+</style></head><body>
+<header>
+<h1>x402 method audit — 22 of 78 sellers answer POST</h1>
+<p class="sub">Generated 2026-11-14 from our own scripted probes. Every number below comes from
+a request we actually sent; nothing here is an estimate. The GET-side census lives at
+<a href="https://edvyno.github.io/akari-proof/integrity.html">integrity.html</a>.</p>
+<div class="kpis">
+<div class="kpi"><b>28.2%</b><span>of 78 hosts return a real 402 to POST</span></div>
+<div class="kpi bad"><b>71.8%</b><span>do not — 405, 404 or a free answer</span></div>
+<div class="kpi"><b>137</b><span>paid routes POSTed (they advertise 313)</span></div>
+<div class="kpi"><b>0</b><span>verdict changes since 2026-10-30 (0 hosts in both runs)</span></div>
+</div>
+</header>
+<main>
+
+<h2>What was measured</h2>
+<p>For each seller in our census we took the routes that answer <code>GET</code> with a real 402 —
+the ones a seller advertises as paid — and sent the same route a <code>POST</code> with an empty
+JSON body and no payment. A working seller answers <code>402</code> plus a challenge either way.
+This page is the result of 137 such requests across 78 hosts, first measured
+2026-10-30 and re-run 2026-11-14.</p>
+
+<h2>POST status codes (137 requests)</h2>
+<table><thead><tr><th>code</th><th>meaning for the buyer</th><th>count</th><th>share</th></tr></thead>
+<tbody></tbody></table>
+
+<h2>Per-host verdict (78 hosts)</h2>
+<table><thead><tr><th>verdict</th><th>definition</th><th>hosts</th></tr></thead><tbody>
+<tr><td><code>serves_post_402</code></td><td>every route we POSTed returned 402</td><td class="n">22</td></tr>
+<tr><td><code>post_405</code></td><td>at least one route answered 405 Method Not Allowed</td><td class="n">28</td></tr>
+<tr><td><code>post_other</code></td><td>answered, but not with a paywall (404/401/200)</td><td class="n">28</td></tr>
+</tbody></table>
+
+<h2>Fifteen days, 0 fixes</h2>
+<p>We first ran this on 2026-10-30. 0 of those hosts answered again on
+2026-11-14. The number of hosts whose verdict changed: <b>0</b>. The same hosts
+fail the same method in the same way. Whatever is causing this is not a transient server bug —
+it is how these servers were written, and nobody has told them.</p>
+
+<h2>Reproduce it</h2>
+<p>No client library, no key, no payment. Take any route a seller charges for and change the verb:</p>
+<pre>curl -s -o /dev/null -w '%{http_code}\n' -X POST \
+  -H 'Content-Type: application/json' -d '{}' \
+  https://&lt;seller&gt;/&lt;their-paid-route&gt;</pre>
+<p>402 means they sell to agents. 405 means they sell to <em>curl -X GET</em>. 404 means the route
+they published does not exist for the verb an agent tool chose.</p>
+
+<h2>Who does answer POST (22 hosts, named because they pass)</h2>
+<p class="muted">We name sellers that passed. We do not name the ones that failed: their page may
+have changed since we probed it, and naming them would be a claim we cannot keep current.</p>
+<ul class="pass"><li><code>402cron.com</code></li><li><code>agent-ready.dev</code></li><li><code>agent.connskill.com</code></li><li><code>agent.pocket.network</code></li><li><code>agent402.tools</code></li><li><code>agentbit.app</code></li><li><code>agentforge-taupe.vercel.app</code></li><li><code>agi.apify.com</code></li><li><code>ai-data-marketplace-1042299154756.us-central1.run.app</code></li><li><code>api.agentwork.run</code></li><li><code>api.anchor-x402.com</code></li><li><code>api.chit402.com</code></li><li><code>api.grid-hub.app</code></li><li><code>api.insumermodel.com</code></li><li><code>api.loopholetape.com</code></li><li><code>api.macaroonnetwork.com</code></li><li><code>api.marketintelligenceapi.com</code></li><li><code>api.robinx.io</code></li><li><code>api.verdixapi.com</code></li><li><code>api.vetpulse.theaslangroupllc.com</code></li><li><code>api.xfuel.app</code></li><li><code>arbipulse.theaslangroupllc.com</code></li></ul>
+
+<h2>Our own server had this defect</h2>
+<p>Before pointing at anyone else we ran the same check against our own paid routes. Every
+<code>GET</code> route charged correctly and every <code>POST</code> to the same path returned
+405 — a free bypass for any client that picked the other verb. Fixed 2026-10-30: POST twins for
+every paid GET route, so the unpaid POST now gets the same 402 and the same price. Re-verified
+by a daily selftest, and you can check it yourself right now:</p>
+<pre>for m in GET POST; do curl -s -o /dev/null -w "$m %{http_code}\n" -X $m \
+  -H 'Content-Type: application/json' -d '{}' https://03s9tr085tfe5agke0tpqng34o.ingress.quanglong.org/x402/feed; done</pre>
+
+<div class="cta">
+<p><b>Want this run against your own host?</b> The $49 audit probes every paid route with both
+verbs, maps each finding to the exact change, and re-runs after you ship.
+<a href="https://03s9tr085tfe5agke0tpqng34o.ingress.quanglong.org/x402/audit-plus?url=&lt;your origin&gt;">Open an audit</a> ·
+<a href="https://03s9tr085tfe5agke0tpqng34o.ingress.quanglong.org/x402/catalog">price list</a> ·
+<a href="https://edvyno.github.io/akari-proof/index.html">what we have earned, published</a></p>
+<p class="muted">One person runs this desk. Measurements are published whether or not they
+flatter us.</p>
+</div>
+
+<p class="muted">Method: 137 POST requests with an empty JSON body, 15s timeout,
+8 workers, browser user-agent, no payment header. Source rows: one per host in
+<code>x402_post_probe.jsonl</code>, reproducible with
+<code>scripts/x402_post_probe.py</code>. Page generated 2026-11-14 18:55 UTC.</p>
+</main></body></html>
