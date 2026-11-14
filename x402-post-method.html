@@ -29,7 +29,7 @@ a request we actually sent; nothing here is an estimate. The GET-side census liv
 <div class="kpi"><b>28.2%</b><span>of 78 hosts return a real 402 to POST</span></div>
 <div class="kpi bad"><b>71.8%</b><span>do not — 405, 404 or a free answer</span></div>
 <div class="kpi"><b>137</b><span>paid routes POSTed (they advertise 313)</span></div>
-<div class="kpi"><b>0</b><span>verdict changes since 2026-10-30 (0 hosts in both runs)</span></div>
+<div class="kpi"><b>1</b><span>verdict changes since 2026-10-30 (78 hosts in both runs)</span></div>
 </div>
 </header>
 <main>
@@ -52,11 +52,14 @@ This page is the result of 137 such requests across 78 hosts, first measured
 <tr><td><code>post_other</code></td><td>answered, but not with a paywall (404/401/200)</td><td class="n">28</td></tr>
 </tbody></table>
 
-<h2>Fifteen days, 0 fixes</h2>
-<p>We first ran this on 2026-10-30. 0 of those hosts answered again on
-2026-11-14. The number of hosts whose verdict changed: <b>0</b>. The same hosts
-fail the same method in the same way. Whatever is causing this is not a transient server bug —
-it is how these servers were written, and nobody has told them.</p>
+<h2>Fifteen days later: 0 sellers fixed</h2>
+<p>We first ran this on 2026-10-30. All 78 of those hosts answered again on
+2026-11-14. Hosts whose verdict changed: <b>1</b>. <code>agents.dyoeway.org</code> moved post_other &rarr; post_405
+Hosts that started answering POST with a real 402, and did not before: <b>0</b>.</p>
+<p>That is the finding. This is not a transient server bug — it is how these servers were
+written, it survives two weeks of uptime, and the sellers do not know. Every one of them is
+losing the buyers whose client picks <code>POST</code>, and there is no error on their side
+because a 405 looks like a client mistake, not a missing paywall.</p>
 
 <h2>Reproduce it</h2>
 <p>No client library, no key, no payment. Take any route a seller charges for and change the verb:</p>
