@@ -1,29 +1,29 @@
 {
- "generated_at": "2026-11-20T12:21:35.192Z",
+ "generated_at": "2026-11-20T13:15:27.517Z",
  "network": {
   "chain": "FLOP Devnet",
   "spec_version": 1014031,
-  "head_block": 4190308
+  "head_block": 4193374
  },
  "scanned": {
-  "from": 4188163,
-  "to": 4190308,
+  "from": 4190309,
+  "to": 4193374,
   "blocks": 1100,
-  "new_events": 1150
+  "new_events": 2440
  },
  "events_24h": {
-  "total": 63579,
+  "total": 66019,
   "by_type": {
-   "flopSubsidy.SubsidyPaid": 46932,
-   "syntheticTasks.GhostTaskIssued": 2331,
-   "syntheticTasks.CalibrationJobIssued": 2331,
-   "paidStorage.EpochTariffSet": 390,
-   "syntheticTasks.CalibrationJobResolved": 2313,
-   "syntheticTasks.GhostTaskCompleted": 2313,
-   "agentIdentity.TaskCompleted": 32,
-   "computeChannel.TimedOutRefunded": 249,
-   "computeChannel.ChannelFeeProfilePinned": 657,
-   "computeChannel.AssuranceClassPinned": 657,
+   "flopSubsidy.SubsidyPaid": 47952,
+   "syntheticTasks.GhostTaskIssued": 2706,
+   "syntheticTasks.CalibrationJobIssued": 2706,
+   "paidStorage.EpochTariffSet": 398,
+   "syntheticTasks.CalibrationJobResolved": 2640,
+   "syntheticTasks.GhostTaskCompleted": 2640,
+   "agentIdentity.TaskCompleted": 34,
+   "computeChannel.TimedOutRefunded": 250,
+   "computeChannel.ChannelFeeProfilePinned": 658,
+   "computeChannel.AssuranceClassPinned": 658,
    "computeChannel.ChannelOpened": 638,
    "computeChannel.CalibrationSnapshotted": 638,
    "daRegistry.BlobRegistered": 1177,
@@ -34,8 +34,8 @@
    "computeChannel.Settled": 349,
    "modelRegistry.MarketStateUpdated": 120,
    "agentIdentity.AgentRegistered": 2,
-   "computeChannel.ForceOpenRequested": 25,
-   "syntheticTasks.GhostTaskExpired": 29,
+   "computeChannel.ForceOpenRequested": 26,
+   "syntheticTasks.GhostTaskExpired": 30,
    "computeChannel.ForceOpenExpired": 11,
    "minerStaking.MinerRegistered": 18,
    "minerStaking.SponsorPositionCreated": 18,
@@ -44,297 +44,297 @@
    "computeChannel.SettlementPosted": 7,
    "hwCalibration.BenchmarkBurstAccepted": 12,
    "minerStaking.DelegatorStaked": 13,
-   "hwCalibration.BenchmarkCapRenewed": 4,
+   "hwCalibration.BenchmarkCapRenewed": 5,
    "minerStaking.SponsorUnbondingStarted": 1,
    "minerStaking.MinerDeregistered": 1,
    "daRegistry.EndpointAnnounced": 18
   }
  },
- "subsidy_events_in_window": 1100,
+ "subsidy_events_in_window": 1020,
  "recent_events": [
   {
-   "block": 4190280,
-   "section": "paidStorage",
-   "method": "EpochTariffSet",
-   "args": "[34919,\"{\\\"epoch\\\":34919,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":34918,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193364,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobIssued",
+   "args": "[\"0x9010eb078b32182e5580c75823a16e3d228416a2d5fc85dcf813a363903371fb\",\"5Df3RmzMYMpHShYXRdyKniN18pizPA7m38nxFJyovFNgognz\",1000,3078,4193964,\"0x4ae90477f2bf0a972d521171f1cf72a34af553282bdd0fd875b164595a1ad4e3\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4190223,
-   "section": "minerStaking",
-   "method": "SponsorPositionCreated",
-   "args": "[664,\"5F7WuAa6mEPqsSTqw94mGkpmrcLVdxA5yi5ea5JrpwLUz68E\",\"5CtMPM2fNCofCGNAdwmD6SSHrt4kugbyKRjCkPAY95fTyCZc\",\"0x00000000000007695a92c18399ece000\",\"Operator\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193364,
+   "section": "syntheticTasks",
+   "method": "GhostTaskIssued",
+   "args": "[\"0x9010eb078b32182e5580c75823a16e3d228416a2d5fc85dcf813a363903371fb\",\"5Df3RmzMYMpHShYXRdyKniN18pizPA7m38nxFJyovFNgognz\",1000,4193964]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4190223,
-   "section": "minerStaking",
-   "method": "MinerRegistered",
-   "args": "[\"5CtMPM2fNCofCGNAdwmD6SSHrt4kugbyKRjCkPAY95fTyCZc\",0,100000000]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193364,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobIssued",
+   "args": "[\"0x384c0a63be7c75b09b0c92e5708a2cf426243bad464e24ed2afce8489d6c646f\",\"5Df3RmzMYMpHShYXRdyKniN18pizPA7m38nxFJyovFNgognz\",1000,3078,4193964,\"0x0c71ed089332f15bf4f6fbad60ff8b15be16945e3d5a5f2a019916fc76288912\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4190160,
-   "section": "paidStorage",
-   "method": "EpochTariffSet",
-   "args": "[34918,\"{\\\"epoch\\\":34918,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":34917,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193364,
+   "section": "syntheticTasks",
+   "method": "GhostTaskIssued",
+   "args": "[\"0x384c0a63be7c75b09b0c92e5708a2cf426243bad464e24ed2afce8489d6c646f\",\"5Df3RmzMYMpHShYXRdyKniN18pizPA7m38nxFJyovFNgognz\",1000,4193964]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4190113,
-   "section": "minerStaking",
-   "method": "DelegatorStaked",
-   "args": "[\"5DPJyfqkNgnuPC7LjM22Hc6Zqo4bVmkyvNfibUBk9P2QoPXq\",\"5D8DtvECUmAgdVueHBcnSASbBB6W4Lpe8d3xJBdWpbUHCt9Q\",\"0x000000000000000006f05b59d3b20000\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193364,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobIssued",
+   "args": "[\"0xa290c3e2a4169d0f06b077abfa2e65a6ee94cc2128c04151990bb6b2053ebf42\",\"5Df3RmzMYMpHShYXRdyKniN18pizPA7m38nxFJyovFNgognz\",1000,3078,4193964,\"0xbd16d67cf8b2d346d38815250a6a2c7269f4bad92ccbdf9803aa0ba1cd7d5e23\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4190050,
-   "section": "computeChannel",
-   "method": "TimedOutRefunded",
-   "args": "[\"0xccff9703ff523d40ca2d03ad41b9b73faf43476f4c88eb74771412b2e72f4d8e\",\"0x000000000000000000b1a2bc2ec50000\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193364,
+   "section": "syntheticTasks",
+   "method": "GhostTaskIssued",
+   "args": "[\"0xa290c3e2a4169d0f06b077abfa2e65a6ee94cc2128c04151990bb6b2053ebf42\",\"5Df3RmzMYMpHShYXRdyKniN18pizPA7m38nxFJyovFNgognz\",1000,4193964]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4190050,
-   "section": "computeChannel",
-   "method": "TimedOutRefunded",
-   "args": "[\"0x36abcbde51c9ec8cde4e03c54f0bbb3280a901f1c4bfd45131042fe21c087572\",\"0x000000000000000000b1a2bc2ec50000\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193364,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobIssued",
+   "args": "[\"0x8273ac0015465fbe6453ffbab6e27667747b983974f048ee35cd0e19b741d6d2\",\"5Df3RmzMYMpHShYXRdyKniN18pizPA7m38nxFJyovFNgognz\",1000,3078,4193964,\"0xcfce54881cd0e7461055083ae0d6388cdced49002586e5349aefe68a32621421\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4190040,
-   "section": "paidStorage",
-   "method": "EpochTariffSet",
-   "args": "[34917,\"{\\\"epoch\\\":34917,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":34916,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193364,
+   "section": "syntheticTasks",
+   "method": "GhostTaskIssued",
+   "args": "[\"0x8273ac0015465fbe6453ffbab6e27667747b983974f048ee35cd0e19b741d6d2\",\"5Df3RmzMYMpHShYXRdyKniN18pizPA7m38nxFJyovFNgognz\",1000,4193964]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189978,
-   "section": "computeChannel",
-   "method": "CalibrationSnapshotted",
-   "args": "[\"0x74c5e3125af7a3285ebf08e3bdbdd15ca120872fcc109bae48111826992e7f38\",\"5ECiPWhMucanbEEQrR38VQ6GL8pHS2KCaMgXvDWcWS17AByF\",131,\"Soft\",1,25000]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193356,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0xb166fe1d3113b80eeb86f457c491437e3282568d035268e36aafd50c2439d376\",\"5EXVkziuud9BnDw7ybMbjcFwCbLL6Yr7JFkLRvWiMT8f9r6L\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189978,
-   "section": "computeChannel",
-   "method": "ChannelOpened",
-   "args": "[\"0x74c5e3125af7a3285ebf08e3bdbdd15ca120872fcc109bae48111826992e7f38\",\"5FHp2aaXpytQEB3xMSasoF57vuC36NQNzfF7p5MvPSFFME7w\",\"5ECiPWhMucanbEEQrR38VQ6GL8pHS2KCaMgXvDWcWS17AByF\",\"0x000000000000000000b1a2bc2ec50000\",\"0xfab8ec57f3bc1b5d4ca644fe12fab2ca1c35c24697d577c610b382cfea14d52d\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193356,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0xb166fe1d3113b80eeb86f457c491437e3282568d035268e36aafd50c2439d376\",\"5EXVkziuud9BnDw7ybMbjcFwCbLL6Yr7JFkLRvWiMT8f9r6L\",9900,4193343,4193356,4193943,3077,\"0xbefea229d1b1f1f5a8bb1bdd470b79b6f403f78c7a53e47913b31bfad2ac062e\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189978,
-   "section": "computeChannel",
-   "method": "AssuranceClassPinned",
-   "args": "[\"0x74c5e3125af7a3285ebf08e3bdbdd15ca120872fcc109bae48111826992e7f38\",\"TeeToploc\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193356,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0x7cf2fdef0c76ea841692aa5776861a9c424e831da46871a46f205033d04168c0\",\"5H9Mh3shvDEf7vdBzzeXFGguo38f74r5kj66uXWmgf9ZnYcJ\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189978,
-   "section": "computeChannel",
-   "method": "ChannelFeeProfilePinned",
-   "args": "[\"0x74c5e3125af7a3285ebf08e3bdbdd15ca120872fcc109bae48111826992e7f38\",1]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193356,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0x7cf2fdef0c76ea841692aa5776861a9c424e831da46871a46f205033d04168c0\",\"5H9Mh3shvDEf7vdBzzeXFGguo38f74r5kj66uXWmgf9ZnYcJ\",6500,4193343,4193356,4193943,3077,\"0x1991646a6d4026b8cc6225422b8713a0a4787386494dd45f6f5b5e2a3eed772d\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189920,
-   "section": "paidStorage",
-   "method": "EpochTariffSet",
-   "args": "[34916,\"{\\\"epoch\\\":34916,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":34915,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193356,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0xadd8f14d2b9430bd10f8a47808f6a08d427607f10b724f2da5a330229dc11c38\",\"5G1osNXaECZTVTqXQeuUmXcnPvHZokxhFxovx3CFaW4zRCUM\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189908,
-   "section": "computeChannel",
-   "method": "CalibrationSnapshotted",
-   "args": "[\"0xd3efc1d146fd58754075bcd9eff2da67e7def3938dc14f924ac3c64f78481566\",\"5GjS96BsGUhawkiRxvcnpK9NuyTBHh5BiEfpCKpvv1GPcaYp\",203,\"Soft\",1,25000]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193356,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0xadd8f14d2b9430bd10f8a47808f6a08d427607f10b724f2da5a330229dc11c38\",\"5G1osNXaECZTVTqXQeuUmXcnPvHZokxhFxovx3CFaW4zRCUM\",5500,4193343,4193356,4193943,3077,\"0x7b6ddee46a6049e925b2ca36baaca9d671bdfd19d60b5b5488a3a000fc409000\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189908,
-   "section": "computeChannel",
-   "method": "ChannelOpened",
-   "args": "[\"0xd3efc1d146fd58754075bcd9eff2da67e7def3938dc14f924ac3c64f78481566\",\"5ES4jocU1RSJzE5eTL35RoMqngh2vjUQacACMN1jkDd2oRuq\",\"5GjS96BsGUhawkiRxvcnpK9NuyTBHh5BiEfpCKpvv1GPcaYp\",\"0x000000000000000000b1a2bc2ec50000\",\"0xfab8ec57f3bc1b5d4ca644fe12fab2ca1c35c24697d577c610b382cfea14d52d\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193356,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0xa85db7030d4ce1f9418192b60d0e61936bd42f1f79a45e84b1705006d10cc5e9\",\"5D53hgvm44fnL2CxR1GhgfGeBgmapycqj6so6fUGv5rirGfh\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189908,
-   "section": "computeChannel",
-   "method": "AssuranceClassPinned",
-   "args": "[\"0xd3efc1d146fd58754075bcd9eff2da67e7def3938dc14f924ac3c64f78481566\",\"TeeToploc\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193356,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0xa85db7030d4ce1f9418192b60d0e61936bd42f1f79a45e84b1705006d10cc5e9\",\"5D53hgvm44fnL2CxR1GhgfGeBgmapycqj6so6fUGv5rirGfh\",10100,4193343,4193356,4193943,3077,\"0x37832af4c98b55d5be11c1442982398eda603851bab21d3a5ee6e9334ae34170\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189908,
-   "section": "computeChannel",
-   "method": "ChannelFeeProfilePinned",
-   "args": "[\"0xd3efc1d146fd58754075bcd9eff2da67e7def3938dc14f924ac3c64f78481566\",1]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193356,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0x64489dce180b6715a4bbd62340ca82fd1db0c117bec80ccb1e40ac8140dddf9f\",\"5EZvsLK3Xid9QaLHn3yc9A8MDD2RcezApNAw5ztLajgLXKvK\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189877,
-   "section": "computeChannel",
-   "method": "CalibrationSnapshotted",
-   "args": "[\"0x12ba2abe47f98450ce09cf8cf541beaa062e020cfc675ea5a2d638e74458b80d\",\"5EtZRdLh8XTLnRrA4DnoWkzRwLPhCvTLMqtzaAbZkn5A3rNi\",140,\"Soft\",1,25000]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193356,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0x64489dce180b6715a4bbd62340ca82fd1db0c117bec80ccb1e40ac8140dddf9f\",\"5EZvsLK3Xid9QaLHn3yc9A8MDD2RcezApNAw5ztLajgLXKvK\",6500,4193343,4193356,4193943,3077,\"0x3e07d4e9d09e6d436bc44ebfc496395044c30fc3ad6ffd7c30265f2ea0252e38\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189877,
-   "section": "computeChannel",
-   "method": "ChannelOpened",
-   "args": "[\"0x12ba2abe47f98450ce09cf8cf541beaa062e020cfc675ea5a2d638e74458b80d\",\"5Ckr32q4U9ng4NHmT2RrqBQmE4yh1jhSkv5pMFqAs8wrKkj5\",\"5EtZRdLh8XTLnRrA4DnoWkzRwLPhCvTLMqtzaAbZkn5A3rNi\",\"0x000000000000000000b1a2bc2ec50000\",\"0xfab8ec57f3bc1b5d4ca644fe12fab2ca1c35c24697d577c610b382cfea14d52d\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193356,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0xc5d0dde13f4d658c3c6539c701fa944fc21c598b7f217a181d15326532b632d6\",\"5EKtBe6qz9YKjjDNwDhBdUuDkGCyHZBuxkvsqc6EmeYkynDB\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189877,
-   "section": "computeChannel",
-   "method": "AssuranceClassPinned",
-   "args": "[\"0x12ba2abe47f98450ce09cf8cf541beaa062e020cfc675ea5a2d638e74458b80d\",\"TeeToploc\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193356,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0xc5d0dde13f4d658c3c6539c701fa944fc21c598b7f217a181d15326532b632d6\",\"5EKtBe6qz9YKjjDNwDhBdUuDkGCyHZBuxkvsqc6EmeYkynDB\",9050,4193343,4193356,4193943,3077,\"0x539975237a96d2a4450f94160b5d11e6d51be38b06d0cdc78827827d5eb017f4\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189877,
-   "section": "computeChannel",
-   "method": "ChannelFeeProfilePinned",
-   "args": "[\"0x12ba2abe47f98450ce09cf8cf541beaa062e020cfc675ea5a2d638e74458b80d\",1]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193356,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0x517526d931ff521112c1357937dda1a9a9d714d6ada85e5e3bc7f7e288ebdeb3\",\"5HizRwus9GCdcsTfvndX6TnK5jE1cxcw7n2QWyKDxUqYRH39\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189870,
-   "section": "computeChannel",
-   "method": "CalibrationSnapshotted",
-   "args": "[\"0xa5d422bbb62801962ddbe953c95ba721749238f66cbbc6b4124f6586d02c516a\",\"5ECDmNGkRG9JndkH2Hs21ndNgRQQ1eGVUPGMV66easB9JFyv\",209,\"Soft\",1,25000]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193356,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0x517526d931ff521112c1357937dda1a9a9d714d6ada85e5e3bc7f7e288ebdeb3\",\"5HizRwus9GCdcsTfvndX6TnK5jE1cxcw7n2QWyKDxUqYRH39\",6500,4193343,4193356,4193943,3077,\"0x3249c93f45c017c1a8fd80bb16c5b2ed73d81ecf43167ee9f0c46ecdacd7aa30\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189870,
-   "section": "computeChannel",
-   "method": "ChannelOpened",
-   "args": "[\"0xa5d422bbb62801962ddbe953c95ba721749238f66cbbc6b4124f6586d02c516a\",\"5Fq5jmD4NVBfVtxwpDtpfsWYLpee7Ww2oJBnVpqRXxKu6hC3\",\"5ECDmNGkRG9JndkH2Hs21ndNgRQQ1eGVUPGMV66easB9JFyv\",\"0x000000000000000000b1a2bc2ec50000\",\"0xfab8ec57f3bc1b5d4ca644fe12fab2ca1c35c24697d577c610b382cfea14d52d\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193355,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0x2ca7c135da1ffec64d806bcb89fdb5fb6efd6e5c8f633ba70822f7ff4ee74875\",\"5EkGUciY6TcvWzpQtcVBdn4S4J473Ko7wQYHFJmhd66oU1YH\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189870,
-   "section": "computeChannel",
-   "method": "AssuranceClassPinned",
-   "args": "[\"0xa5d422bbb62801962ddbe953c95ba721749238f66cbbc6b4124f6586d02c516a\",\"TeeToploc\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193355,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0x2ca7c135da1ffec64d806bcb89fdb5fb6efd6e5c8f633ba70822f7ff4ee74875\",\"5EkGUciY6TcvWzpQtcVBdn4S4J473Ko7wQYHFJmhd66oU1YH\",6500,4193343,4193355,4193943,3077,\"0x4e890fb451cac1105562fb518656ae67ea5d8edc2e321f32adffca1114fd5578\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189870,
-   "section": "computeChannel",
-   "method": "ChannelFeeProfilePinned",
-   "args": "[\"0xa5d422bbb62801962ddbe953c95ba721749238f66cbbc6b4124f6586d02c516a\",1]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193355,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0x20ff690dcfa517f8b9a05e52b662e3556077a0e75955986d2b6a1cea16513ec4\",\"5DLMZtB5it7s6DZRmd98ABzfY8zPx9JBAAcvCtgXTL4ttSkC\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189870,
-   "section": "computeChannel",
-   "method": "CalibrationSnapshotted",
-   "args": "[\"0x9687e8dff2eb22983bff608a8372baf585ee0f64dee5a7b749f481b17b2100a1\",\"5EqM5hpryTAbZDRaoZC3LgMbrKUK5rz85qzLsrw7MBv5L8tz\",203,\"Soft\",1,25000]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193355,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0x20ff690dcfa517f8b9a05e52b662e3556077a0e75955986d2b6a1cea16513ec4\",\"5DLMZtB5it7s6DZRmd98ABzfY8zPx9JBAAcvCtgXTL4ttSkC\",1000,4193343,4193355,4193943,3077,\"0x48debccaca5ac7d034639d5168c0ad49ec224ce090524c8498babcbad6a1cbbb\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189870,
-   "section": "computeChannel",
-   "method": "ChannelOpened",
-   "args": "[\"0x9687e8dff2eb22983bff608a8372baf585ee0f64dee5a7b749f481b17b2100a1\",\"5Ff3bjDYFRcUBKrpF49V11ZYRe3gSqBAECZUDkKS2Q93FqcJ\",\"5EqM5hpryTAbZDRaoZC3LgMbrKUK5rz85qzLsrw7MBv5L8tz\",\"0x000000000000000000b1a2bc2ec50000\",\"0xfab8ec57f3bc1b5d4ca644fe12fab2ca1c35c24697d577c610b382cfea14d52d\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193355,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0x5752acffdd56c73cee376a75967bbdb8b5a8a6a559f9cbaff325889056ed168c\",\"5Gn7WjjvNcHJm2kEXXbLz54tKUGs3UyyvLDokjXc4CZSC43T\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189870,
-   "section": "computeChannel",
-   "method": "AssuranceClassPinned",
-   "args": "[\"0x9687e8dff2eb22983bff608a8372baf585ee0f64dee5a7b749f481b17b2100a1\",\"TeeToploc\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193355,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0x5752acffdd56c73cee376a75967bbdb8b5a8a6a559f9cbaff325889056ed168c\",\"5Gn7WjjvNcHJm2kEXXbLz54tKUGs3UyyvLDokjXc4CZSC43T\",6500,4193343,4193355,4193943,3077,\"0x050a1e76e52c5371d7145d507fae1638f6e0f48a319a59e1892f0fa380cf655b\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189870,
-   "section": "computeChannel",
-   "method": "ChannelFeeProfilePinned",
-   "args": "[\"0x9687e8dff2eb22983bff608a8372baf585ee0f64dee5a7b749f481b17b2100a1\",1]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193355,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0x98b1f447eb9fe0263bd3066b8f9618c3d761ce4a83c049a9b0aed357056cad6b\",\"5EkVoBvgegTTaWdizVjv7smpvitJ795BWNH6rELUAkd7FNJ5\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189800,
-   "section": "paidStorage",
-   "method": "EpochTariffSet",
-   "args": "[34915,\"{\\\"epoch\\\":34915,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":34914,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193355,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0x98b1f447eb9fe0263bd3066b8f9618c3d761ce4a83c049a9b0aed357056cad6b\",\"5EkVoBvgegTTaWdizVjv7smpvitJ795BWNH6rELUAkd7FNJ5\",6500,4193343,4193355,4193943,3077,\"0x4ec13f92128b51946480dd6d68e493f9537c4f0b29696ac702da2fddc6595c82\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189700,
-   "section": "computeChannel",
-   "method": "CalibrationSnapshotted",
-   "args": "[\"0x2cf87ef3e5fcef701afbc584ed2d6be35aa88c08cfb66fa69446b96986e29121\",\"5FcPv277tkYptSXuPcguF1bmjtt9GS6uemw4Pj8mEuoe6bA3\",142,\"Soft\",1,25000]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193355,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0x27fc8816f945138ad26f6abcfd8ddd5679283f7075ba6d16c77d9ba5e42db8bb\",\"5H46MswbTSXsej7cQgBmmwHfNNrLDs2c8no4MezvK4NaDezd\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189700,
-   "section": "computeChannel",
-   "method": "ChannelOpened",
-   "args": "[\"0x2cf87ef3e5fcef701afbc584ed2d6be35aa88c08cfb66fa69446b96986e29121\",\"5ECtifN794J9g6PjhPH4kD2JCTKN2mjepnr6PwcVcxhQQEwe\",\"5FcPv277tkYptSXuPcguF1bmjtt9GS6uemw4Pj8mEuoe6bA3\",\"0x000000000000000000b1a2bc2ec50000\",\"0xfab8ec57f3bc1b5d4ca644fe12fab2ca1c35c24697d577c610b382cfea14d52d\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193355,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0x27fc8816f945138ad26f6abcfd8ddd5679283f7075ba6d16c77d9ba5e42db8bb\",\"5H46MswbTSXsej7cQgBmmwHfNNrLDs2c8no4MezvK4NaDezd\",6500,4193343,4193355,4193943,3077,\"0x9b61b651504bb31cd4b0d69ebe540a60397adc1be9e43b0b37a9ddb9cd3f61eb\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189700,
-   "section": "computeChannel",
-   "method": "AssuranceClassPinned",
-   "args": "[\"0x2cf87ef3e5fcef701afbc584ed2d6be35aa88c08cfb66fa69446b96986e29121\",\"TeeToploc\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193355,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0xb497177b6f95cc5f923f8ff139dedbc7212cdda9dacef0004db73eedd6dbefbb\",\"5ED68Tgj9G6xtPnWKxzBkr7cij6nPR3kVXUYQ2RT27igsrH2\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189700,
-   "section": "computeChannel",
-   "method": "ChannelFeeProfilePinned",
-   "args": "[\"0x2cf87ef3e5fcef701afbc584ed2d6be35aa88c08cfb66fa69446b96986e29121\",1]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193355,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0xb497177b6f95cc5f923f8ff139dedbc7212cdda9dacef0004db73eedd6dbefbb\",\"5ED68Tgj9G6xtPnWKxzBkr7cij6nPR3kVXUYQ2RT27igsrH2\",4716950,4193343,4193355,4193943,3077,\"0x3d65207a8fea4015e4f29863886e11e27afacdf8d3dae219d53bab419f2e13e4\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189694,
-   "section": "computeChannel",
-   "method": "CalibrationSnapshotted",
-   "args": "[\"0xae675ad9a39e725a718cdc69d25cbb719e58e6e4c038db98fc49130aa0ae73cd\",\"5DWk7Ay6xH8352qSc1vZDvDgLNRKyqWristcGQ4vrQpbFQcM\",79,\"Soft\",1,25000]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193354,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0xa632e084f2dc095863de031f13668b8ffad23c0c5ee8cd3cb0c3bcbfc48999b2\",\"5CnphAdpPpAKkigKZzBUwSFcLTTowsUjY5eexoeYAETpZNQt\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189694,
-   "section": "computeChannel",
-   "method": "ChannelOpened",
-   "args": "[\"0xae675ad9a39e725a718cdc69d25cbb719e58e6e4c038db98fc49130aa0ae73cd\",\"5ESBEK4voxgwmoMnQzVD6HSTxEKrZ2PBRUiEnyR6QUNCTQzr\",\"5DWk7Ay6xH8352qSc1vZDvDgLNRKyqWristcGQ4vrQpbFQcM\",\"0x000000000000000000b1a2bc2ec50000\",\"0xfab8ec57f3bc1b5d4ca644fe12fab2ca1c35c24697d577c610b382cfea14d52d\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193354,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0xa632e084f2dc095863de031f13668b8ffad23c0c5ee8cd3cb0c3bcbfc48999b2\",\"5CnphAdpPpAKkigKZzBUwSFcLTTowsUjY5eexoeYAETpZNQt\",9800,4193343,4193354,4193943,3077,\"0xb7fb624f0c955697710db0da9d3d2446383187f0777c1b2e8aad5b8fb9adde8e\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189694,
-   "section": "computeChannel",
-   "method": "AssuranceClassPinned",
-   "args": "[\"0xae675ad9a39e725a718cdc69d25cbb719e58e6e4c038db98fc49130aa0ae73cd\",\"TeeToploc\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193354,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0x8965745b9b98793de96630a25aa92c92ffe92f894dec5d024e053a04bf7086e3\",\"5FxNsxX5P5uWCKNbNW2eYdxQcQcK5nzdFmjhxJVwpjLLzq9A\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189694,
-   "section": "computeChannel",
-   "method": "ChannelFeeProfilePinned",
-   "args": "[\"0xae675ad9a39e725a718cdc69d25cbb719e58e6e4c038db98fc49130aa0ae73cd\",1]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193354,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0x8965745b9b98793de96630a25aa92c92ffe92f894dec5d024e053a04bf7086e3\",\"5FxNsxX5P5uWCKNbNW2eYdxQcQcK5nzdFmjhxJVwpjLLzq9A\",4622450,4193343,4193354,4193943,3077,\"0x1965ee04fe5f5d361483ef15b8689c1a0caa2cd54ad0372b9ba30b499a96a782\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189680,
-   "section": "paidStorage",
-   "method": "EpochTariffSet",
-   "args": "[34914,\"{\\\"epoch\\\":34914,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":34913,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193354,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0xed2a66d8d69799567b6d87e55838711f2155000c2c6d4ec49433c003cc8672e7\",\"5FxVnr7gb1xQojuYiweHSiV6DdGBkyABvhiXDeap84cT89jU\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   },
   {
-   "block": 4189661,
-   "section": "computeChannel",
-   "method": "TimedOutRefunded",
-   "args": "[\"0xf8b984b8ed77c78f327683eb9286bb92c18b9b6bc0af782087eb1c13e1182795\",\"0x000000000000000000b1a2bc2ec50000\"]",
-   "seen_at": "2026-11-20T12:19:29.872Z"
+   "block": 4193354,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0xed2a66d8d69799567b6d87e55838711f2155000c2c6d4ec49433c003cc8672e7\",\"5FxVnr7gb1xQojuYiweHSiV6DdGBkyABvhiXDeap84cT89jU\",6500,4193343,4193354,4193943,3077,\"0x4bec2975f171d1fbc049ba299ccdbda4825f9972cdb48626323111eabf576c61\"]",
+   "seen_at": "2026-11-20T13:14:17.139Z"
   }
  ],
  "tokens": {
-  "total_issuance_mflop": 4401444755.896972,
+  "total_issuance_mflop": 4401492563.879961,
   "active_grants": 0,
   "grants_created": 0,
   "frozen_mflop": 0
@@ -342,10 +342,10 @@
  "compute": {
   "settled_turns_tracked": 22,
   "total_miner_paid_mflop": 35848.33582,
-  "total_escrow_reserved_mflop": 0,
+  "total_escrow_reserved_mflop": 50347.486195,
   "total_burned_mflop": 0,
-  "active_reservations": 681,
-  "open_channels": 55069,
+  "active_reservations": 674,
+  "open_channels": 55077,
   "paid_storage_bytes": 196608,
   "live_service_lanes": 0
  },
