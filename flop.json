@@ -1,47 +1,47 @@
 {
- "generated_at": "2026-11-21T03:58:09.829Z",
+ "generated_at": "2026-11-21T04:17:10.639Z",
  "network": {
   "chain": "FLOP Devnet",
   "spec_version": 1014031,
-  "head_block": 4242255
+  "head_block": 4243318
  },
  "scanned": {
-  "from": 4241262,
-  "to": 4242255,
-  "blocks": 994,
-  "new_events": 1013
+  "from": 4242256,
+  "to": 4243318,
+  "blocks": 1063,
+  "new_events": 1075
  },
  "events_24h": {
-  "total": 110333,
+  "total": 109646,
   "by_type": {
-   "flopSubsidy.SubsidyPaid": 66062,
-   "computeChannel.ToplocEvidenceSubmitted": 194,
-   "computeChannel.ChannelFeeProfilePinned": 274,
-   "computeChannel.AssuranceClassPinned": 274,
-   "computeChannel.ChannelOpened": 249,
-   "computeChannel.CalibrationSnapshotted": 249,
-   "syntheticTasks.GhostTaskIssued": 10056,
-   "syntheticTasks.CalibrationJobIssued": 10056,
-   "computeChannel.ValidatorFeeAccrued": 160,
-   "computeChannel.AuditFeeEarmarked": 160,
-   "computeChannel.Settled": 160,
-   "syntheticTasks.CalibrationJobResolved": 9969,
-   "syntheticTasks.GhostTaskCompleted": 9969,
-   "paidStorage.EpochTariffSet": 545,
-   "minerStaking.MinerRegistered": 12,
-   "minerStaking.SponsorPositionCreated": 12,
-   "daRegistry.BlobRegistered": 672,
-   "computeChannel.SessionEvidenceRegistered": 662,
-   "hwCalibration.BenchmarkBurstAccepted": 19,
-   "computeChannel.CapacityReservationRateSet": 17,
+   "flopSubsidy.SubsidyPaid": 66025,
+   "computeChannel.ChannelFeeProfilePinned": 260,
+   "computeChannel.AssuranceClassPinned": 260,
+   "computeChannel.ChannelOpened": 235,
+   "computeChannel.CalibrationSnapshotted": 235,
+   "daRegistry.BlobRegistered": 650,
+   "computeChannel.SessionEvidenceRegistered": 640,
+   "paidStorage.EpochTariffSet": 544,
    "computeChannel.TimedOutRefunded": 69,
+   "computeChannel.ToplocEvidenceSubmitted": 183,
+   "computeChannel.ValidatorFeeAccrued": 150,
+   "computeChannel.AuditFeeEarmarked": 150,
+   "computeChannel.Settled": 150,
    "modelRegistry.MarketStateUpdated": 180,
+   "syntheticTasks.GhostTaskIssued": 9930,
+   "syntheticTasks.CalibrationJobIssued": 9930,
+   "syntheticTasks.CalibrationJobResolved": 9843,
+   "syntheticTasks.GhostTaskCompleted": 9843,
+   "hwCalibration.BenchmarkBurstAccepted": 17,
    "syntheticTasks.GhostTaskExpired": 68,
-   "agentIdentity.TaskCompleted": 80,
+   "agentIdentity.TaskCompleted": 81,
    "computeChannel.ForceOpenRequested": 73,
    "minerStaking.SponsorUnbondingStarted": 2,
    "minerStaking.MinerDeregistered": 2,
-   "computeChannel.ForceOpenExpired": 11,
+   "minerStaking.MinerRegistered": 11,
+   "minerStaking.SponsorPositionCreated": 11,
+   "computeChannel.ForceOpenExpired": 12,
+   "computeChannel.CapacityReservationRateSet": 15,
    "daRegistry.EndpointAnnounced": 36,
    "computeChannel.SettlementPosted": 2,
    "minerStaking.DelegatorStaked": 16,
@@ -54,144 +54,95 @@
    "workVesting.EpochRolledOver": 1
   }
  },
- "subsidy_events_in_window": 994,
+ "subsidy_events_in_window": 1063,
  "recent_events": [
   {
-   "block": 4242240,
-   "section": "paidStorage",
-   "method": "EpochTariffSet",
-   "args": "[35352,\"{\\\"epoch\\\":35352,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35351,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
+   "block": 4243245,
+   "section": "minerStaking",
+   "method": "SponsorPositionCreated",
+   "args": "[671,\"5F7WuAa6mEPqsSTqw94mGkpmrcLVdxA5yi5ea5JrpwLUz68E\",\"5FC3Cr1xwNxmgoGUbimAijMbNg435fXLBvdM515g1pK5D7SY\",\"0x00000000000007695a92c18399ece000\",\"Operator\"]",
+   "seen_at": "2026-11-21T04:16:18.643Z"
   },
   {
-   "block": 4242165,
+   "block": 4243245,
+   "section": "minerStaking",
+   "method": "MinerRegistered",
+   "args": "[\"5FC3Cr1xwNxmgoGUbimAijMbNg435fXLBvdM515g1pK5D7SY\",0,100000000]",
+   "seen_at": "2026-11-21T04:16:18.643Z"
+  },
+  {
+   "block": 4243200,
+   "section": "paidStorage",
+   "method": "EpochTariffSet",
+   "args": "[35360,\"{\\\"epoch\\\":35360,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35359,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
+   "seen_at": "2026-11-21T04:16:18.643Z"
+  },
+  {
+   "block": 4243080,
+   "section": "paidStorage",
+   "method": "EpochTariffSet",
+   "args": "[35359,\"{\\\"epoch\\\":35359,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35358,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
+   "seen_at": "2026-11-21T04:16:18.643Z"
+  },
+  {
+   "block": 4242960,
+   "section": "paidStorage",
+   "method": "EpochTariffSet",
+   "args": "[35358,\"{\\\"epoch\\\":35358,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35357,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
+   "seen_at": "2026-11-21T04:16:18.643Z"
+  },
+  {
+   "block": 4242840,
+   "section": "paidStorage",
+   "method": "EpochTariffSet",
+   "args": "[35357,\"{\\\"epoch\\\":35357,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35356,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
+   "seen_at": "2026-11-21T04:16:18.643Z"
+  },
+  {
+   "block": 4242771,
    "section": "computeChannel",
-   "method": "ForceOpenRequested",
-   "args": "[\"0xed8b1dbd3e3d9c3e2ece24462f99da8fca6c8c09a6064a8fa9db6d516ba145d8\",\"5GcqV9LCEy6jvf9FzGEFLdeQhpuKBSLgeaU2hoBCULSuHsQe\",\"5FjwPvYbu6zDyhnsF2Qq92m42cgcrLQAGqhkN1CTHaoXj7vj\",\"0x0000000000000000002386f26fc10000\",4242761]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
+   "method": "ForceOpenExpired",
+   "args": "[\"0xed8b1dbd3e3d9c3e2ece24462f99da8fca6c8c09a6064a8fa9db6d516ba145d8\",\"5FjwPvYbu6zDyhnsF2Qq92m42cgcrLQAGqhkN1CTHaoXj7vj\",\"0x0000000000000000002386f26fc10000\",1]",
+   "seen_at": "2026-11-21T04:16:18.643Z"
   },
   {
-   "block": 4242165,
-   "section": "computeChannel",
-   "method": "AssuranceClassPinned",
-   "args": "[\"0xed8b1dbd3e3d9c3e2ece24462f99da8fca6c8c09a6064a8fa9db6d516ba145d8\",\"TeeToploc\"]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
-  },
-  {
-   "block": 4242165,
-   "section": "computeChannel",
-   "method": "ChannelFeeProfilePinned",
-   "args": "[\"0xed8b1dbd3e3d9c3e2ece24462f99da8fca6c8c09a6064a8fa9db6d516ba145d8\",1]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
-  },
-  {
-   "block": 4242120,
+   "block": 4242720,
    "section": "paidStorage",
    "method": "EpochTariffSet",
-   "args": "[35351,\"{\\\"epoch\\\":35351,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35350,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
+   "args": "[35356,\"{\\\"epoch\\\":35356,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35355,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
+   "seen_at": "2026-11-21T04:16:18.643Z"
   },
   {
-   "block": 4242000,
-   "section": "paidStorage",
-   "method": "EpochTariffSet",
-   "args": "[35350,\"{\\\"epoch\\\":35350,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35349,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
-  },
-  {
-   "block": 4241880,
-   "section": "paidStorage",
-   "method": "EpochTariffSet",
-   "args": "[35349,\"{\\\"epoch\\\":35349,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35348,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
-  },
-  {
-   "block": 4241760,
+   "block": 4242617,
    "section": "agentIdentity",
    "method": "TaskCompleted",
    "args": "[\"0x32f3ff0a7ad6148d28112068e7123de76b5cb4b7487ce4c2d5877a5aa4104db1\",true,\"0x0000000000000000002386f26fc10000\"]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
+   "seen_at": "2026-11-21T04:16:18.643Z"
   },
   {
-   "block": 4241760,
+   "block": 4242600,
    "section": "paidStorage",
    "method": "EpochTariffSet",
-   "args": "[35348,\"{\\\"epoch\\\":35348,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35347,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
+   "args": "[35355,\"{\\\"epoch\\\":35355,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35354,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
+   "seen_at": "2026-11-21T04:16:18.643Z"
   },
   {
-   "block": 4241728,
-   "section": "agentIdentity",
-   "method": "TaskCompleted",
-   "args": "[\"0x136b2da6143f60e34a27f68249bfbe0c14be4caae0fc81ccb7c44ccf30e02069\",true,\"0x00000000000000000de0b6b3a7640000\"]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
-  },
-  {
-   "block": 4241724,
-   "section": "daRegistry",
-   "method": "BlobRegistered",
-   "args": "[\"0x2920a0bed77cb479db0ffb5b0f445263803f0cf2d740195b3ebfdf7d24e5350c\",\"5DLeyzzMT2jVaN14Vv9xjdeEuTmCFAf9bo72hGh4pL7LHo9h\",\"Leased\",68,13600000000000,6,null]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
-  },
-  {
-   "block": 4241640,
+   "block": 4242480,
    "section": "paidStorage",
    "method": "EpochTariffSet",
-   "args": "[35347,\"{\\\"epoch\\\":35347,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35346,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
+   "args": "[35354,\"{\\\"epoch\\\":35354,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35353,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
+   "seen_at": "2026-11-21T04:16:18.643Z"
   },
   {
-   "block": 4241520,
+   "block": 4242360,
    "section": "paidStorage",
    "method": "EpochTariffSet",
-   "args": "[35346,\"{\\\"epoch\\\":35346,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35345,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
-  },
-  {
-   "block": 4241402,
-   "section": "computeChannel",
-   "method": "CalibrationSnapshotted",
-   "args": "[\"0xc8aef0284fec564331b723e2bbef6802a43b747fbe3906c9cc69f10310ec7537\",\"5GN7VrabSfsUs57ndPjNb95RWy8AucgLaFwrztKha12zDbF3\",9,\"Soft\",1,25000]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
-  },
-  {
-   "block": 4241402,
-   "section": "computeChannel",
-   "method": "ChannelOpened",
-   "args": "[\"0xc8aef0284fec564331b723e2bbef6802a43b747fbe3906c9cc69f10310ec7537\",\"5Dk2H5M3XMn8iJkyyX2HqFZrqX1VmggMuLNBaY3o6EwtDjPH\",\"5GN7VrabSfsUs57ndPjNb95RWy8AucgLaFwrztKha12zDbF3\",\"0x0000000000000000016345785d8a0000\",\"0x1a52c1abe781db051e70ae357f72bb70161ca0c092df0b618f22a9292ba63306\"]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
-  },
-  {
-   "block": 4241402,
-   "section": "computeChannel",
-   "method": "AssuranceClassPinned",
-   "args": "[\"0xc8aef0284fec564331b723e2bbef6802a43b747fbe3906c9cc69f10310ec7537\",\"TeeToploc\"]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
-  },
-  {
-   "block": 4241402,
-   "section": "computeChannel",
-   "method": "ChannelFeeProfilePinned",
-   "args": "[\"0xc8aef0284fec564331b723e2bbef6802a43b747fbe3906c9cc69f10310ec7537\",1]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
-  },
-  {
-   "block": 4241400,
-   "section": "paidStorage",
-   "method": "EpochTariffSet",
-   "args": "[35345,\"{\\\"epoch\\\":35345,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35344,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
-  },
-  {
-   "block": 4241280,
-   "section": "paidStorage",
-   "method": "EpochTariffSet",
-   "args": "[35344,\"{\\\"epoch\\\":35344,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35343,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
-   "seen_at": "2026-11-21T03:57:19.496Z"
+   "args": "[35353,\"{\\\"epoch\\\":35353,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":35352,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
+   "seen_at": "2026-11-21T04:16:18.643Z"
   }
  ],
  "tokens": {
-  "total_issuance_mflop": 4404348971.821604,
+  "total_issuance_mflop": 4404365963.810666,
   "active_grants": 0,
   "grants_created": 0,
   "frozen_mflop": 0
@@ -201,7 +152,7 @@
   "total_miner_paid_mflop": 35853.49532,
   "total_escrow_reserved_mflop": 50362.821746,
   "total_burned_mflop": 0,
-  "active_reservations": 694,
+  "active_reservations": 693,
   "open_channels": 55158,
   "paid_storage_bytes": 196608,
   "live_service_lanes": 0
@@ -213,7 +164,7 @@
  },
  "providers": {
   "validators": 13,
-  "miners": 556,
+  "miners": 557,
   "active_vesting_miners": 0,
   "agent_wallets": 19058,
   "sponsored_settlements": 1,
