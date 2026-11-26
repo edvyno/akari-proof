@@ -1,47 +1,47 @@
 {
- "generated_at": "2026-11-26T03:09:52.633Z",
+ "generated_at": "2026-11-26T03:29:00.468Z",
  "network": {
   "chain": "FLOP Devnet",
   "spec_version": 1014038,
-  "head_block": 4666631
+  "head_block": 4667777
  },
  "scanned": {
-  "from": 4665506,
-  "to": 4666631,
+  "from": 4666632,
+  "to": 4667777,
   "blocks": 1100,
-  "new_events": 1582
+  "new_events": 1749
  },
  "events_24h": {
-  "total": 136179,
+  "total": 136077,
   "by_type": {
    "flopSubsidy.SubsidyPaid": 84066,
-   "syntheticTasks.CalibrationJobIssued": 11427,
-   "syntheticTasks.GhostTaskIssued": 11427,
-   "computeChannel.OfferAccepted": 657,
-   "computeChannel.CalibrationSnapshotted": 689,
-   "computeChannel.ChannelOpened": 689,
-   "computeChannel.AssuranceClassPinned": 698,
-   "computeChannel.ChannelFeeProfilePinned": 698,
-   "syntheticTasks.GhostTaskCompleted": 11166,
-   "syntheticTasks.CalibrationJobResolved": 11166,
-   "computeChannel.TimedOutRefunded": 604,
-   "computeChannel.OfferOpenFailed": 597,
-   "paidStorage.EpochTariffSet": 704,
-   "computeChannel.EscrowToppedUp": 179,
-   "computeChannel.SessionEvidenceRegistered": 250,
-   "daRegistry.BlobRegistered": 261,
+   "paidStorage.EpochTariffSet": 705,
+   "syntheticTasks.GhostTaskCompleted": 11177,
+   "syntheticTasks.CalibrationJobResolved": 11177,
+   "syntheticTasks.CalibrationJobIssued": 11430,
+   "syntheticTasks.GhostTaskIssued": 11430,
+   "computeChannel.OfferAccepted": 645,
+   "computeChannel.CalibrationSnapshotted": 677,
+   "computeChannel.ChannelOpened": 677,
+   "computeChannel.AssuranceClassPinned": 686,
+   "computeChannel.ChannelFeeProfilePinned": 686,
+   "computeChannel.TimedOutRefunded": 594,
+   "computeChannel.OfferOpenFailed": 587,
+   "syntheticTasks.GhostTaskExpired": 221,
+   "computeChannel.EscrowToppedUp": 166,
+   "computeChannel.SessionEvidenceRegistered": 234,
+   "daRegistry.BlobRegistered": 245,
    "workVesting.EpochRolledOver": 1,
    "modelRegistry.MarketStateUpdated": 240,
-   "computeChannel.Settled": 72,
-   "computeChannel.AuditFeeEarmarked": 72,
-   "computeChannel.ValidatorFeeAccrued": 72,
-   "computeChannel.ToplocEvidenceSubmitted": 84,
-   "syntheticTasks.GhostTaskExpired": 219,
+   "computeChannel.Settled": 71,
+   "computeChannel.AuditFeeEarmarked": 71,
+   "computeChannel.ValidatorFeeAccrued": 71,
+   "computeChannel.ToplocEvidenceSubmitted": 82,
    "computeChannel.ForceOpenRequested": 39,
    "computeChannel.ForceOpenExpired": 7,
    "agentWallet.AgentTransfer": 2,
-   "agentWallet.WalletFunded": 6,
-   "agentWallet.WalletCreated": 17,
+   "agentWallet.WalletFunded": 5,
+   "agentWallet.WalletCreated": 15,
    "agentIdentity.AgentRegistered": 36,
    "agentIdentity.TaskCompleted": 14,
    "daRegistry.EndpointAnnounced": 12,
@@ -52,288 +52,288 @@
  "subsidy_events_in_window": 1100,
  "recent_events": [
   {
-   "block": 4666629,
+   "block": 4667760,
+   "section": "paidStorage",
+   "method": "EpochTariffSet",
+   "args": "[38898,\"{\\\"epoch\\\":38898,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":38897,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667724,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0x3e4461e8174dd3e69b54a15ad11d6536bea71c5c6c9a96b7d5ff2d67912fa6c8\",\"5Ept1Tk7zTMzFCcbK3priBPUx67M6Gz4buWKyhkrTksU3fzB\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667724,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0x3e4461e8174dd3e69b54a15ad11d6536bea71c5c6c9a96b7d5ff2d67912fa6c8\",\"5Ept1Tk7zTMzFCcbK3priBPUx67M6Gz4buWKyhkrTksU3fzB\",9750,4667708,4667724,4668308,6176,\"0x0d40683941bdb96a96f02972304032586cb895df1d0297f9553f893d6115e058\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667724,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0x0986e9577159c88ee7bb0813a31c793e597d6d509b684dad896523acea3d64d5\",\"5Ept1Tk7zTMzFCcbK3priBPUx67M6Gz4buWKyhkrTksU3fzB\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667724,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0x0986e9577159c88ee7bb0813a31c793e597d6d509b684dad896523acea3d64d5\",\"5Ept1Tk7zTMzFCcbK3priBPUx67M6Gz4buWKyhkrTksU3fzB\",9750,4667708,4667724,4668308,6176,\"0xf06c63723fb534052e0c3f87fdd905cab9994d0ab30c32f80ecb4b04ff85ab88\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667708,
    "section": "syntheticTasks",
    "method": "CalibrationJobIssued",
-   "args": "[\"0xeabc5ed8215d33d4bcb4638d9b5e83f75c6888d3ff3bc99e4c94b09ef84a8d7c\",\"5DFTqRV3VoZzHuMH3rsJNGxdoCzn2ES5ZTnhn93Umt1egBQx\",143300,6160,4667229,\"0xaaacce4cb4db2a1dd467a5265dd076897b38b34dab2217bc38c624e2049c9a01\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "args": "[\"0x3e4461e8174dd3e69b54a15ad11d6536bea71c5c6c9a96b7d5ff2d67912fa6c8\",\"5Ept1Tk7zTMzFCcbK3priBPUx67M6Gz4buWKyhkrTksU3fzB\",9750,6176,4668308,\"0x0d40683941bdb96a96f02972304032586cb895df1d0297f9553f893d6115e058\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666629,
+   "block": 4667708,
    "section": "syntheticTasks",
    "method": "GhostTaskIssued",
-   "args": "[\"0xeabc5ed8215d33d4bcb4638d9b5e83f75c6888d3ff3bc99e4c94b09ef84a8d7c\",\"5DFTqRV3VoZzHuMH3rsJNGxdoCzn2ES5ZTnhn93Umt1egBQx\",143300,4667229]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "args": "[\"0x3e4461e8174dd3e69b54a15ad11d6536bea71c5c6c9a96b7d5ff2d67912fa6c8\",\"5Ept1Tk7zTMzFCcbK3priBPUx67M6Gz4buWKyhkrTksU3fzB\",9750,4668308]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666629,
+   "block": 4667708,
    "section": "syntheticTasks",
    "method": "CalibrationJobIssued",
-   "args": "[\"0x0d8ed221379efee75ce121a044013033fc6b183031c1b403fc4bc3a986c93189\",\"5DFTqRV3VoZzHuMH3rsJNGxdoCzn2ES5ZTnhn93Umt1egBQx\",143300,6160,4667229,\"0x2c759232b7cafd9b8ea7577a10422622fcf5553b4426eeed62434cceaef31eec\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "args": "[\"0x0986e9577159c88ee7bb0813a31c793e597d6d509b684dad896523acea3d64d5\",\"5Ept1Tk7zTMzFCcbK3priBPUx67M6Gz4buWKyhkrTksU3fzB\",9750,6176,4668308,\"0xf06c63723fb534052e0c3f87fdd905cab9994d0ab30c32f80ecb4b04ff85ab88\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666629,
+   "block": 4667708,
    "section": "syntheticTasks",
    "method": "GhostTaskIssued",
-   "args": "[\"0x0d8ed221379efee75ce121a044013033fc6b183031c1b403fc4bc3a986c93189\",\"5DFTqRV3VoZzHuMH3rsJNGxdoCzn2ES5ZTnhn93Umt1egBQx\",143300,4667229]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "args": "[\"0x0986e9577159c88ee7bb0813a31c793e597d6d509b684dad896523acea3d64d5\",\"5Ept1Tk7zTMzFCcbK3priBPUx67M6Gz4buWKyhkrTksU3fzB\",9750,4668308]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "CalibrationJobIssued",
-   "args": "[\"0x3aa5a3e84c9aeebcf82db9b3c3757073db3901be54927ea95ea2c91e50cd39cd\",\"5CGLZd5i19bxr4Lt7zZaVUC2gGRW5grYcWrsGGCZgopjffZq\",6500,6160,4667229,\"0xa91059b841a8616e2c2ba543f58683c1670342e07a7c11f472f5698129b7cad8\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "block": 4667640,
+   "section": "paidStorage",
+   "method": "EpochTariffSet",
+   "args": "[38897,\"{\\\"epoch\\\":38897,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":38896,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "GhostTaskIssued",
-   "args": "[\"0x3aa5a3e84c9aeebcf82db9b3c3757073db3901be54927ea95ea2c91e50cd39cd\",\"5CGLZd5i19bxr4Lt7zZaVUC2gGRW5grYcWrsGGCZgopjffZq\",6500,4667229]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "block": 4667520,
+   "section": "paidStorage",
+   "method": "EpochTariffSet",
+   "args": "[38896,\"{\\\"epoch\\\":38896,\\\"rates\\\":{\\\"rentNum\\\":1,\\\"setupFee\\\":0,\\\"retrievalNum\\\":1,\\\"requestFee\\\":1},\\\"rentDen\\\":1000,\\\"retrievalDen\\\":1000,\\\"previousEpoch\\\":38895,\\\"stepBound\\\":null,\\\"profileRevision\\\":1,\\\"declarerCount\\\":0,\\\"declaredBytes\\\":0,\\\"freeBytes\\\":0,\\\"tripwireCounter\\\":0,\\\"source\\\":\\\"CarriedForward\\\"}\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "CalibrationJobIssued",
-   "args": "[\"0x85c8d7dcb9a6435156e6e4ec89f17665e6f9c6f0c6a9dc7e1673c5a8ac72e0c6\",\"5CGLZd5i19bxr4Lt7zZaVUC2gGRW5grYcWrsGGCZgopjffZq\",6500,6160,4667229,\"0x228227a88b43ddb497553f7b55093186dabc3cfc4f98a814fb49bef81d8c052c\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "GhostTaskIssued",
-   "args": "[\"0x85c8d7dcb9a6435156e6e4ec89f17665e6f9c6f0c6a9dc7e1673c5a8ac72e0c6\",\"5CGLZd5i19bxr4Lt7zZaVUC2gGRW5grYcWrsGGCZgopjffZq\",6500,4667229]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "CalibrationJobIssued",
-   "args": "[\"0x28f327b64fad831bd1003523f15da23411ef57a61227e0d4fad8e88a3185bf3b\",\"5Fh6DhAUi3swBGXZaXtLGyPszx31WrgEBEc13wRk2jBDbpvZ\",8250,6160,4667229,\"0x212f009ef8109b74125fee1806ccbb622c09366bf6079d1afb3a9f2a491ba5d4\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "GhostTaskIssued",
-   "args": "[\"0x28f327b64fad831bd1003523f15da23411ef57a61227e0d4fad8e88a3185bf3b\",\"5Fh6DhAUi3swBGXZaXtLGyPszx31WrgEBEc13wRk2jBDbpvZ\",8250,4667229]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "CalibrationJobIssued",
-   "args": "[\"0xafd91a8af7b81b9754bdc0d69f81feabeabb6384eac5c1ef28491ee6f1a8123c\",\"5Fh6DhAUi3swBGXZaXtLGyPszx31WrgEBEc13wRk2jBDbpvZ\",8250,6160,4667229,\"0x37230d0dc6f20c3631e6a7d365d4abe3f1ce37aaa5d1e98b7606a859812f9b69\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "GhostTaskIssued",
-   "args": "[\"0xafd91a8af7b81b9754bdc0d69f81feabeabb6384eac5c1ef28491ee6f1a8123c\",\"5Fh6DhAUi3swBGXZaXtLGyPszx31WrgEBEc13wRk2jBDbpvZ\",8250,4667229]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "CalibrationJobIssued",
-   "args": "[\"0x601219691a6912cbff81382099d47464e99cbc438859d569fbca88959d1de851\",\"5Hdyjr6zqkiV6JdHjFt4wCU6ZECX5qiYrLL9uDKE7viJSEEU\",6500,6160,4667229,\"0xc998ef74bb17e21ff965520569c837b4d8875df40f556b05a2c727f376627134\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "GhostTaskIssued",
-   "args": "[\"0x601219691a6912cbff81382099d47464e99cbc438859d569fbca88959d1de851\",\"5Hdyjr6zqkiV6JdHjFt4wCU6ZECX5qiYrLL9uDKE7viJSEEU\",6500,4667229]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "CalibrationJobIssued",
-   "args": "[\"0x4075f16954acbab1471a36e99912767a8940066d48bc00e972aa9d9c39540291\",\"5Hdyjr6zqkiV6JdHjFt4wCU6ZECX5qiYrLL9uDKE7viJSEEU\",6500,6160,4667229,\"0x2280dcb9761d4dd8f6de6d99573e99b8a7454505da1fa120d3b810f1431d669e\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "GhostTaskIssued",
-   "args": "[\"0x4075f16954acbab1471a36e99912767a8940066d48bc00e972aa9d9c39540291\",\"5Hdyjr6zqkiV6JdHjFt4wCU6ZECX5qiYrLL9uDKE7viJSEEU\",6500,4667229]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "CalibrationJobIssued",
-   "args": "[\"0xc2a535467e25ea687ba9f3055bae6eedff7149de9a3b31dd79bba7b6af82546a\",\"5G4gQiJExiF5x1AepKYcnV5Z3w7JEJg9QFCgT9SGSfLoMTNJ\",9950,6160,4667229,\"0x9c7d3f841f7cd73432dd466843c718bcb237123e029f40fd4561978a257cedb9\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "GhostTaskIssued",
-   "args": "[\"0xc2a535467e25ea687ba9f3055bae6eedff7149de9a3b31dd79bba7b6af82546a\",\"5G4gQiJExiF5x1AepKYcnV5Z3w7JEJg9QFCgT9SGSfLoMTNJ\",9950,4667229]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "CalibrationJobIssued",
-   "args": "[\"0x85998e33ce7f7d21c197214f7485bed3666b780866bc0a6f0cc419634e13a9b7\",\"5G4gQiJExiF5x1AepKYcnV5Z3w7JEJg9QFCgT9SGSfLoMTNJ\",9950,6160,4667229,\"0xaa156302592aab63575a45742580df11b61d38c86ab7cc84e9e04b9611be418d\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "GhostTaskIssued",
-   "args": "[\"0x85998e33ce7f7d21c197214f7485bed3666b780866bc0a6f0cc419634e13a9b7\",\"5G4gQiJExiF5x1AepKYcnV5Z3w7JEJg9QFCgT9SGSfLoMTNJ\",9950,4667229]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "CalibrationJobIssued",
-   "args": "[\"0xc328ae1dba343eff5e368e555245cd585bbeb816ca28046f300c64e43704ea97\",\"5CnphAdpPpAKkigKZzBUwSFcLTTowsUjY5eexoeYAETpZNQt\",9800,6160,4667229,\"0xed32f4460ea4dd61c457cb336aea4e6bc9c6d8f0eadae26da82e98ffc56e8a6b\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "GhostTaskIssued",
-   "args": "[\"0xc328ae1dba343eff5e368e555245cd585bbeb816ca28046f300c64e43704ea97\",\"5CnphAdpPpAKkigKZzBUwSFcLTTowsUjY5eexoeYAETpZNQt\",9800,4667229]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "CalibrationJobIssued",
-   "args": "[\"0x1132f9a4cb442dc6fc92ff3fb91ccae8180d994da53b13251ef4bb9d11f13705\",\"5CnphAdpPpAKkigKZzBUwSFcLTTowsUjY5eexoeYAETpZNQt\",9800,6160,4667229,\"0x165182083915531cb7d402f94e1837ca31a8a6fb75dc8e08bd37354bfb436417\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "GhostTaskIssued",
-   "args": "[\"0x1132f9a4cb442dc6fc92ff3fb91ccae8180d994da53b13251ef4bb9d11f13705\",\"5CnphAdpPpAKkigKZzBUwSFcLTTowsUjY5eexoeYAETpZNQt\",9800,4667229]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "CalibrationJobIssued",
-   "args": "[\"0x76a0be37097f03fabdce40b71c0b6c50f638ccdeb13b926fa0c37ef28eeac892\",\"5H9Mh3shvDEf7vdBzzeXFGguo38f74r5kj66uXWmgf9ZnYcJ\",6500,6160,4667229,\"0x8ccb108e9fe983ef0321d0d63547974cecdc1e328b93c6c67e6194f099d40207\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "GhostTaskIssued",
-   "args": "[\"0x76a0be37097f03fabdce40b71c0b6c50f638ccdeb13b926fa0c37ef28eeac892\",\"5H9Mh3shvDEf7vdBzzeXFGguo38f74r5kj66uXWmgf9ZnYcJ\",6500,4667229]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "CalibrationJobIssued",
-   "args": "[\"0x856206133eaa83ada730a8e6b66226ed3475323d7fdfe4fafe1a7e10e3e719e1\",\"5H9Mh3shvDEf7vdBzzeXFGguo38f74r5kj66uXWmgf9ZnYcJ\",6500,6160,4667229,\"0xcf68d387027312e7ca8937ae277c989212f13d46bbe43c95ba88ad9ec05083ea\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666629,
-   "section": "syntheticTasks",
-   "method": "GhostTaskIssued",
-   "args": "[\"0x856206133eaa83ada730a8e6b66226ed3475323d7fdfe4fafe1a7e10e3e719e1\",\"5H9Mh3shvDEf7vdBzzeXFGguo38f74r5kj66uXWmgf9ZnYcJ\",6500,4667229]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
-  },
-  {
-   "block": 4666628,
+   "block": 4667486,
    "section": "computeChannel",
    "method": "OfferAccepted",
-   "args": "[\"0x83e35efd90af7007245ca0031c4cec9388747d6cf9c77bd22970f9a40c38284a\",\"5D9uTgFbaNx7YbXRcckf47xvsegyTYbMXWgLeahGY2VBWw5x\",\"0xa2e5fbbb1b48344a\",4667085]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "args": "[\"0xf694bf6cb96fcd08b8b48ef603fd146e1efdf6a2f6b6ad1e5089749356fca733\",\"5D9uTgFbaNx7YbXRcckf47xvsegyTYbMXWgLeahGY2VBWw5x\",\"0x54f2fdf05e20b04f\",4667987]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666628,
+   "block": 4667486,
    "section": "computeChannel",
    "method": "CalibrationSnapshotted",
-   "args": "[\"0x83e35efd90af7007245ca0031c4cec9388747d6cf9c77bd22970f9a40c38284a\",\"5D9uTgFbaNx7YbXRcckf47xvsegyTYbMXWgLeahGY2VBWw5x\",32,\"Soft\",3,25000]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "args": "[\"0xf694bf6cb96fcd08b8b48ef603fd146e1efdf6a2f6b6ad1e5089749356fca733\",\"5D9uTgFbaNx7YbXRcckf47xvsegyTYbMXWgLeahGY2VBWw5x\",32,\"Soft\",3,25000]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666628,
+   "block": 4667486,
    "section": "computeChannel",
    "method": "ChannelOpened",
-   "args": "[\"0x83e35efd90af7007245ca0031c4cec9388747d6cf9c77bd22970f9a40c38284a\",\"5GsXb3TmNGixuEsbtixqHnqWr9UQJ2M8bkqBQWteNekgF98S\",\"5D9uTgFbaNx7YbXRcckf47xvsegyTYbMXWgLeahGY2VBWw5x\",20000000001,\"0x1a52c1abe781db051e70ae357f72bb70161ca0c092df0b618f22a9292ba63306\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "args": "[\"0xf694bf6cb96fcd08b8b48ef603fd146e1efdf6a2f6b6ad1e5089749356fca733\",\"5GsXb3TmNGixuEsbtixqHnqWr9UQJ2M8bkqBQWteNekgF98S\",\"5D9uTgFbaNx7YbXRcckf47xvsegyTYbMXWgLeahGY2VBWw5x\",20000000001,\"0x1a52c1abe781db051e70ae357f72bb70161ca0c092df0b618f22a9292ba63306\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666628,
+   "block": 4667486,
    "section": "computeChannel",
    "method": "AssuranceClassPinned",
-   "args": "[\"0x83e35efd90af7007245ca0031c4cec9388747d6cf9c77bd22970f9a40c38284a\",\"TeeToploc\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "args": "[\"0xf694bf6cb96fcd08b8b48ef603fd146e1efdf6a2f6b6ad1e5089749356fca733\",\"TeeToploc\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666628,
+   "block": 4667486,
    "section": "computeChannel",
    "method": "ChannelFeeProfilePinned",
-   "args": "[\"0x83e35efd90af7007245ca0031c4cec9388747d6cf9c77bd22970f9a40c38284a\",1]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "args": "[\"0xf694bf6cb96fcd08b8b48ef603fd146e1efdf6a2f6b6ad1e5089749356fca733\",1]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666602,
+   "block": 4667484,
    "section": "syntheticTasks",
    "method": "GhostTaskCompleted",
-   "args": "[\"0x2a7b830aa40a7f8e2a44b432713e9f827549737edc38c6fd18a059ca55bbc609\",\"5CGLZd5i19bxr4Lt7zZaVUC2gGRW5grYcWrsGGCZgopjffZq\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "args": "[\"0x9b30be7e450f134dcdea72ff0ce07e35a242f8f46d305855302defd2daf9e9e9\",\"5Hdyjr6zqkiV6JdHjFt4wCU6ZECX5qiYrLL9uDKE7viJSEEU\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666602,
+   "block": 4667484,
    "section": "syntheticTasks",
    "method": "CalibrationJobResolved",
-   "args": "[\"0x2a7b830aa40a7f8e2a44b432713e9f827549737edc38c6fd18a059ca55bbc609\",\"5CGLZd5i19bxr4Lt7zZaVUC2gGRW5grYcWrsGGCZgopjffZq\",6500,4666584,4666602,4667184,6159,\"0xd7740a665656e7d771374960d90b39b03bc767db6482c067b6924fe24026d552\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "args": "[\"0x9b30be7e450f134dcdea72ff0ce07e35a242f8f46d305855302defd2daf9e9e9\",\"5Hdyjr6zqkiV6JdHjFt4wCU6ZECX5qiYrLL9uDKE7viJSEEU\",6500,4667472,4667484,4668072,6174,\"0xbdd74d791036664a332ad073ab103be213c7d2fb2b3b67b88251bbe8019f5c9d\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666602,
+   "block": 4667484,
    "section": "syntheticTasks",
    "method": "GhostTaskCompleted",
-   "args": "[\"0xe44ee24ae23dd6e3d48aa4370d66522976b7d100b9d35ed671894d5bf11ea34a\",\"5CGLZd5i19bxr4Lt7zZaVUC2gGRW5grYcWrsGGCZgopjffZq\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "args": "[\"0x88ee06d586742ea0fd18d5186662dae66f047e36110356630be9fcf899764624\",\"5DFTqRV3VoZzHuMH3rsJNGxdoCzn2ES5ZTnhn93Umt1egBQx\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666602,
+   "block": 4667484,
    "section": "syntheticTasks",
    "method": "CalibrationJobResolved",
-   "args": "[\"0xe44ee24ae23dd6e3d48aa4370d66522976b7d100b9d35ed671894d5bf11ea34a\",\"5CGLZd5i19bxr4Lt7zZaVUC2gGRW5grYcWrsGGCZgopjffZq\",6500,4666584,4666602,4667184,6159,\"0x4970595b7b700fb055565644e2d235d72dfc54ce4402a9841c43b10bb977717d\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "args": "[\"0x88ee06d586742ea0fd18d5186662dae66f047e36110356630be9fcf899764624\",\"5DFTqRV3VoZzHuMH3rsJNGxdoCzn2ES5ZTnhn93Umt1egBQx\",143300,4667472,4667484,4668072,6174,\"0x95b5c323927ef7b62f8a6d515f3277393a30e8ece457d8184fae51e83fbddc11\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666602,
+   "block": 4667484,
    "section": "syntheticTasks",
    "method": "GhostTaskCompleted",
-   "args": "[\"0xcddf2de6c40b5a560b5a206f5197d79e05e962beb2e0a24083ad11bfc78539e2\",\"5G4gQiJExiF5x1AepKYcnV5Z3w7JEJg9QFCgT9SGSfLoMTNJ\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "args": "[\"0xf526dc4f10bedd5135f58ea37f26fa92e867e32e550477c15361a5da212dba01\",\"5CGLZd5i19bxr4Lt7zZaVUC2gGRW5grYcWrsGGCZgopjffZq\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666602,
+   "block": 4667484,
    "section": "syntheticTasks",
    "method": "CalibrationJobResolved",
-   "args": "[\"0xcddf2de6c40b5a560b5a206f5197d79e05e962beb2e0a24083ad11bfc78539e2\",\"5G4gQiJExiF5x1AepKYcnV5Z3w7JEJg9QFCgT9SGSfLoMTNJ\",9950,4666584,4666602,4667184,6159,\"0xc3896c075989982c14645858b7eba97c524b45c8ef026431aa629de01fdaec7a\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "args": "[\"0xf526dc4f10bedd5135f58ea37f26fa92e867e32e550477c15361a5da212dba01\",\"5CGLZd5i19bxr4Lt7zZaVUC2gGRW5grYcWrsGGCZgopjffZq\",6500,4667472,4667484,4668072,6174,\"0xbf2e499cefa59068dfc5dd8b1b8ca2a9342dff1be3cad1b216d990da5483002d\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   },
   {
-   "block": 4666602,
+   "block": 4667484,
    "section": "syntheticTasks",
    "method": "GhostTaskCompleted",
-   "args": "[\"0xe6ce2fcfb7e9ab3f170bf4f1dc31a4e02609aa51575a150497a95d5607876e4f\",\"5DFTqRV3VoZzHuMH3rsJNGxdoCzn2ES5ZTnhn93Umt1egBQx\"]",
-   "seen_at": "2026-11-26T03:09:16.674Z"
+   "args": "[\"0xe0a87944e7e3de3bbcc358253cb72898274d3dd3d6959383c41c4fd8b00949f7\",\"5DFTqRV3VoZzHuMH3rsJNGxdoCzn2ES5ZTnhn93Umt1egBQx\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0xe0a87944e7e3de3bbcc358253cb72898274d3dd3d6959383c41c4fd8b00949f7\",\"5DFTqRV3VoZzHuMH3rsJNGxdoCzn2ES5ZTnhn93Umt1egBQx\",143300,4667472,4667484,4668072,6174,\"0xfc1baba4bd498cdc3461f5b5511a4db904d5d048c0c5c7bd844491382bf6ab17\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0x8ae990e6ea392cad4398ce6e752c2b84278542b7bce123d98fe780477f231429\",\"5CnphAdpPpAKkigKZzBUwSFcLTTowsUjY5eexoeYAETpZNQt\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0x8ae990e6ea392cad4398ce6e752c2b84278542b7bce123d98fe780477f231429\",\"5CnphAdpPpAKkigKZzBUwSFcLTTowsUjY5eexoeYAETpZNQt\",9800,4667472,4667484,4668072,6174,\"0x9b84d410d43c9d72be816a99b9eaacf461230be4732094c45fe3685b245c936e\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0xfa5d1a4469484e0300f0abb9178467dbb280399fcc4777e255c61570ec0a75b4\",\"5GP4Bx9osokXb5MwkBcF3hAB6PstF4NuHzCrXqFBb4GrG4oz\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0xfa5d1a4469484e0300f0abb9178467dbb280399fcc4777e255c61570ec0a75b4\",\"5GP4Bx9osokXb5MwkBcF3hAB6PstF4NuHzCrXqFBb4GrG4oz\",1000,4667472,4667484,4668072,6174,\"0x67e25db410784c609867c5175d7a36e703a231b6d38c99de37923d5ed837a980\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0xc47beacb829be7e198db25d63c8541236976af0f8010a13087e31a9357c28462\",\"5Fh6DhAUi3swBGXZaXtLGyPszx31WrgEBEc13wRk2jBDbpvZ\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0xc47beacb829be7e198db25d63c8541236976af0f8010a13087e31a9357c28462\",\"5Fh6DhAUi3swBGXZaXtLGyPszx31WrgEBEc13wRk2jBDbpvZ\",8250,4667472,4667484,4668072,6174,\"0xfa7bec8b1081ce865d470dbe6ab6711d9481ed063b0716211feff5b24b3a9c06\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0xa3d4c7f7953c61f709a5802598291999d89f50633f818b1feddb3d7380ce116e\",\"5G4gQiJExiF5x1AepKYcnV5Z3w7JEJg9QFCgT9SGSfLoMTNJ\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0xa3d4c7f7953c61f709a5802598291999d89f50633f818b1feddb3d7380ce116e\",\"5G4gQiJExiF5x1AepKYcnV5Z3w7JEJg9QFCgT9SGSfLoMTNJ\",9950,4667472,4667484,4668072,6174,\"0xd3a0c0eb5903a09fe572d89c6b978342e5a9a91c5b554134b071a4d3c2e5a658\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0xbe6403c2684d04b11bffbc192fe85345f5127c2897a5b69a0b96c03724258fc9\",\"5H9Mh3shvDEf7vdBzzeXFGguo38f74r5kj66uXWmgf9ZnYcJ\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0xbe6403c2684d04b11bffbc192fe85345f5127c2897a5b69a0b96c03724258fc9\",\"5H9Mh3shvDEf7vdBzzeXFGguo38f74r5kj66uXWmgf9ZnYcJ\",6500,4667472,4667484,4668072,6174,\"0xd1539157c8f3d266adeb2d18300591f351250b56b6f753e366625a1a413ac64a\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0x2dfef4888edb60e4593ed5ec671a85f6855e10a47667a50209ada3b272bdc188\",\"5CnphAdpPpAKkigKZzBUwSFcLTTowsUjY5eexoeYAETpZNQt\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0x2dfef4888edb60e4593ed5ec671a85f6855e10a47667a50209ada3b272bdc188\",\"5CnphAdpPpAKkigKZzBUwSFcLTTowsUjY5eexoeYAETpZNQt\",9800,4667472,4667484,4668072,6174,\"0x3133a751e606515faf712506ced707a538a10b52b98a8a9eb941d9f489abd369\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0xbfe17242d46cf697442b8a547f9c50a63c36cbb797a005223878c74c78fc191d\",\"5G4gQiJExiF5x1AepKYcnV5Z3w7JEJg9QFCgT9SGSfLoMTNJ\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0xbfe17242d46cf697442b8a547f9c50a63c36cbb797a005223878c74c78fc191d\",\"5G4gQiJExiF5x1AepKYcnV5Z3w7JEJg9QFCgT9SGSfLoMTNJ\",9950,4667472,4667484,4668072,6174,\"0x6ed26fea95df1cab3f02c0419ed82791ddab8e2df8127263eea97c9a5ec4826b\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "GhostTaskCompleted",
+   "args": "[\"0x28277f079be786c225135d566347976d3868ec91eaffa07565ecceb43658f505\",\"5CGLZd5i19bxr4Lt7zZaVUC2gGRW5grYcWrsGGCZgopjffZq\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
+  },
+  {
+   "block": 4667484,
+   "section": "syntheticTasks",
+   "method": "CalibrationJobResolved",
+   "args": "[\"0x28277f079be786c225135d566347976d3868ec91eaffa07565ecceb43658f505\",\"5CGLZd5i19bxr4Lt7zZaVUC2gGRW5grYcWrsGGCZgopjffZq\",6500,4667472,4667484,4668072,6174,\"0xbf16233fc96f9e8d27357a1fd963cda2ebbc32d215f66ceac01e9e72c2bd1e8c\"]",
+   "seen_at": "2026-11-26T03:28:17.174Z"
   }
  ],
  "tokens": {
-  "total_issuance_mflop": 4421506957.746887,
+  "total_issuance_mflop": 4421525229.746887,
   "active_grants": 0,
   "grants_created": 0,
   "frozen_mflop": 0
@@ -343,8 +343,8 @@
   "total_miner_paid_mflop": 35983.228932,
   "total_escrow_reserved_mflop": 51265.91212,
   "total_burned_mflop": 0,
-  "active_reservations": 641,
-  "open_channels": 61077,
+  "active_reservations": 640,
+  "open_channels": 61080,
   "paid_storage_bytes": 196608,
   "live_service_lanes": 0
  },
